@@ -1,0 +1,50 @@
+:root {
+    --dark: rgb(36, 36, 36);
+    --text-light: rgb(255, 255, 255);
+    --secondary: rgb(160, 184, 207);
+    --primary: #7290FE;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    position: relative;
+    background-color: rgba(15, 23, 42);
+    color: var(--text-light);
+}
+
+h1 {
+    font-size: 3.125rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--text-medium);
+    line-height: 1.6;
+
+}
+
+.txt-primary {
+    color: var(--primary)
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 3rem;
+}
+
+.socials>* {
+    display: inline-block;
+}
+
+.socials span {
+    height: 8rem;
+    width: 1px;
+    background-color: var(--secondary);
+}
