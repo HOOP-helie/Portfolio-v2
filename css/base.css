@@ -21,7 +21,7 @@ h1 {
 }
 
 p {
-    color: var(--text-medium);
+    color: var(--secondary);
     line-height: 1.6;
 
 }
@@ -36,7 +36,7 @@ p {
     align-items: center;
     position: fixed;
     bottom: 0;
-    left: 3rem;
+    left: 4rem;
 }
 
 .socials>* {
@@ -44,7 +44,22 @@ p {
 }
 
 .socials span {
-    height: 8rem;
+    margin-top: 0.5rem;
+    height: 10rem;
     width: 1px;
     background-color: var(--secondary);
+}
+
+.socials i {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-bottom: 1.4rem;
+    opacity: 0.6;
+    transition: 0.2s;
+}
+
+.socials a:hover i {
+    transform: translateY(-3px);
+    color: var(--primary);
+    opacity: 1;
 }
