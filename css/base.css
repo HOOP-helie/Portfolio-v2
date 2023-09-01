@@ -36,7 +36,8 @@ p {
     align-items: center;
     position: fixed;
     bottom: 0;
-    left: 4rem;
+    left: 3%;
+    z-index: 50;
 }
 
 .socials>* {
@@ -45,7 +46,7 @@ p {
 
 .socials span {
     margin-top: 0.5rem;
-    height: 10rem;
+    height: 8rem;
     width: 1px;
     background-color: var(--secondary);
 }
@@ -53,7 +54,7 @@ p {
 .socials i {
     display: inline-block;
     font-size: 1.2rem;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.5rem;
     opacity: 0.6;
     transition: 0.2s;
 }

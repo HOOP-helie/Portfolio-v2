@@ -16,7 +16,6 @@
         position: fixed;
         pointer-events: none;
         transition: transform 0.05s linear;
-        z-index: 0;
     }
 
 
