@@ -1,0 +1,45 @@
+#cursor,
+.cursor-circle {
+    display: none;
+}
+
+@media (min-width: 64rem) {
+
+    #cursor,
+    .cursor-circle {
+        display: block;
+    }
+
+    #cursor {
+        top: 0;
+        left: 0;
+        position: fixed;
+        pointer-events: none;
+        transition: transform 0.05s linear;
+    }
+
+
+    .cursor-circle {
+        width: 2rem;
+        height: 2rem;
+
+        margin-top: -50%;
+        margin-left: -50%;
+        border-radius: 50%;
+        background-color: var(--primary);
+        opacity: 0.5;
+        transition:
+            background-color 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+            filter 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+            width 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+            height 0.5s cubic-bezier(0.25, 1, 0.5, 1)
+    }
+
+    .cursor-circle-grow {
+        width: 10rem;
+        height: 10rem;
+        mix-blend-mode: normal;
+        background: rgba(85, 81, 239, 0.8);
+        filter: blur(35px);
+    }
+}
