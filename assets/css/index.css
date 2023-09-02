@@ -449,6 +449,7 @@ p {
   padding: 1.5rem;
   transition: 0.3s;
   border-radius: 10px;
+  margin-bottom: 3rem;
 }
 .my-background .education .education--block .date {
   width: 30%;
@@ -478,17 +479,22 @@ p {
 }
 .my-background .education .education--block .content .title h4 {
   transition: 0.2s;
+  margin-right: 8px;
 }
 .my-background .education .education--block .content .title img {
   margin-right: 0.5rem;
 }
 .my-background .education .education--block .content .title i {
-  margin-left: 5px;
-  transform: rotate(-45deg) translate(0, 0);
-  transition: 0.3s;
+  position: relative;
+  transform: rotate(-45deg);
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.8rem;
+  bottom: -2px;
+  left: 0;
 }
 .my-background .education .education--block .content .technologies {
-  max-width: 30rem;
+  max-width: 32rem;
 }
 .my-background .education .education--block .content .technologies li {
   display: inline-block;
@@ -498,18 +504,19 @@ p {
   padding: 0.5rem 1rem;
   margin-right: 0.5rem;
   margin-bottom: 0.8rem;
-  border-radius: 10px;
+  border-radius: 12px;
   background-color: hsla(227, 99%, 72%, 0.15);
 }
 .my-background .education .education--block:hover {
   background: rgba(142, 150, 171, 0.05);
 }
-.my-background .education .education--block:hover .title h4,
-.my-background .education .education--block:hover i {
+.my-background .education .education--block:hover .content .title h4,
+.my-background .education .education--block:hover .content i {
   color: var(--primary);
 }
-.my-background .education .education--block:hover i {
-  transform: rotate(-45deg) translate(10px, 10px);
+.my-background .education .education--block:hover .content i {
+  bottom: 2px;
+  left: 5px;
 }
 
 /*# sourceMappingURL=index.css.map */
