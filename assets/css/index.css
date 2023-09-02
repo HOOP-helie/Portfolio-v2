@@ -1,0 +1,464 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+:root {
+  --dark: rgb(36, 36, 36);
+  --text-light: rgb(255, 255, 255);
+  --secondary: rgb(160, 184, 207);
+  --primary: #7290FE;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  position: relative;
+  background-color: rgb(15, 23, 42);
+  color: var(--text-light);
+}
+
+h1 {
+  font-size: 3.125rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2 {
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+p {
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+.txt-primary {
+  color: var(--primary);
+}
+
+.txt-light {
+  color: var(--text-light);
+}
+
+.bg-orb {
+  position: absolute;
+  width: 25vw;
+  aspect-ratio: 1;
+  z-index: -1;
+  background: rgba(52, 51, 141, 0.25);
+  filter: blur(130px);
+}
+
+.subheading {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  width: 80%;
+  max-width: 65rem;
+  margin: 10rem auto;
+}
+
+/* Fixed social bar */
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 3%;
+  z-index: 50;
+}
+
+.socials > * {
+  display: inline-block;
+}
+
+.socials span {
+  margin-top: 0.5rem;
+  height: 8rem;
+  width: 1px;
+  background-color: var(--secondary);
+}
+
+.socials i {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+.socials a:hover i {
+  transform: translateY(-3px);
+  color: var(--primary);
+  opacity: 1;
+}
+
+#cursor,
+.cursor-circle {
+  display: none;
+}
+
+@media (min-width: 64rem) {
+  #cursor,
+  .cursor-circle {
+    display: block;
+  }
+  #cursor {
+    top: 0;
+    left: 0;
+    position: fixed;
+    pointer-events: none;
+    transition: transform 0.05s linear;
+  }
+  .cursor-circle {
+    width: 2rem;
+    height: 2rem;
+    margin-top: -50%;
+    margin-left: -50%;
+    border-radius: 50%;
+    background-color: var(--primary);
+    opacity: 0.5;
+    transition: background-color 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s cubic-bezier(0.25, 1, 0.5, 1), width 0.5s cubic-bezier(0.25, 1, 0.5, 1), height 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  .cursor-circle-grow {
+    width: 10rem;
+    height: 10rem;
+    mix-blend-mode: normal;
+    background: rgba(85, 81, 239, 0.8);
+    filter: blur(35px);
+  }
+}
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: auto;
+  max-width: 90rem;
+  width: 90%;
+}
+
+.small-h1 {
+  font-size: 2.5rem;
+}
+
+.hero-section > div {
+  width: 100%;
+}
+
+.hero-section .introduction {
+  max-width: 42rem;
+  margin-left: 4%;
+}
+
+.hero-section p {
+  max-width: 32.5rem;
+}
+
+.hero-section .visuals {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 4rem;
+  position: relative;
+}
+
+.content--canvas {
+  aspect-ratio: 1;
+  max-width: 38rem;
+  max-height: 38rem;
+}
+
+.hero-section .visuals .visuals-box {
+  max-height: 40rem;
+  position: relative;
+}
+
+.hero-section .visuals .laptop,
+.hero-section .visuals .phone {
+  position: absolute;
+}
+
+.hero-section .visuals .laptop {
+  bottom: -15%;
+  right: -10%;
+  width: 72%;
+}
+
+.hero-section .visuals .laptop img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.hero-section .visuals .phone {
+  top: 2%;
+  left: -5%;
+  width: 40%;
+}
+
+.hero-section .visuals .phone img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.about .title-section {
+  max-width: 25rem;
+  position: relative;
+}
+
+.about .title-section .bg-orb {
+  left: -45%;
+  top: -60%;
+}
+
+.about--content {
+  display: flex;
+}
+
+.about--content > * {
+  width: 100%;
+}
+
+.about--content p {
+  margin-bottom: 1.5rem;
+}
+
+.about--content .recent-skills p {
+  margin-bottom: 1.5rem;
+}
+
+.about--content .recent-skills ul {
+  color: var(--text-light);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  list-style: none;
+}
+
+.about--content .recent-skills li {
+  margin-bottom: 1.2rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.about--content .recent-skills li:before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  font-size: 1.5rem;
+  color: var(--primary);
+  line-height: 15px;
+}
+
+.my-background .title-section {
+  max-width: 35rem;
+}
+
+.my-background .title-section .bg-orb {
+  right: 15%;
+}
+
+.my-background--content {
+  margin-top: 4rem;
+}
+
+.my-background--content .background-tabs {
+  position: relative;
+  border-bottom: 1px solid var(--secondary);
+}
+
+.my-background--content .background-tabs:before {
+  position: absolute;
+  content: "";
+  width: 8rem;
+  height: 1px;
+  background-color: var(--primary);
+  bottom: -1px;
+}
+
+.my-background .tabs-titles {
+  display: flex;
+}
+
+.my-background .tabs-titles h3 {
+  display: flex;
+  color: var(--secondary);
+  width: 12rem;
+  padding-bottom: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.my-background .tabs-titles h3:hover {
+  color: var(--txt-light);
+}
+
+.my-background .tabs-titles .active {
+  color: var(--txt-light);
+}
+
+.my-background .education--block {
+  display: flex;
+  width: 80%;
+}
+
+.my-background .education--block .date {
+  width: 20%;
+}
+
+.my-background .education--block .content {
+  width: 80%;
+}
+
+/*# sourceMappingURL=index.css.map */
