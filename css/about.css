@@ -1,0 +1,47 @@
+.about .title-section {
+    max-width: 25rem;
+    position: relative;
+}
+
+.about .title-section .bg-orb {
+    left: -45%;
+    top: -60%;
+}
+
+.about--content {
+    display: flex;
+}
+
+.about--content>* {
+    width: 100%;
+}
+
+.about--content p {
+    margin-bottom: 1.5rem;
+}
+
+.about--content .recent-skills p {
+    margin-bottom: 1.5rem;
+}
+
+.about--content .recent-skills ul {
+    color: var(--text-light);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    list-style: none;
+}
+
+.about--content .recent-skills li {
+    margin-bottom: 1.2rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.about--content .recent-skills li:before {
+    content: "▹";
+    position: absolute;
+    left: 0px;
+    font-size: 1.5rem;
+    color: var(--primary);
+    line-height: 15px;
+}

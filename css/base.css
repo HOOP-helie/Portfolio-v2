@@ -16,20 +16,56 @@ body {
 h1 {
     font-size: 3.125rem;
     font-weight: 700;
-    line-height: 1.5;
     margin-bottom: 1rem;
+}
+
+h1,
+h2 {
+    line-height: 1.4;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    font-weight: 700;
 }
 
 p {
     color: var(--secondary);
     line-height: 1.6;
-
 }
 
 .txt-primary {
     color: var(--primary)
 }
 
+.txt-light {
+    color: var(--text-light)
+}
+
+.bg-orb {
+    position: absolute;
+    width: 25vw;
+    aspect-ratio: 1;
+    z-index: -1;
+    background: rgba(52, 51, 141, 0.25);
+    filter: blur(130px);
+}
+
+.subheading {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.container {
+    width: 80%;
+    max-width: 65rem;
+    margin: 10rem auto;
+}
+
+
+/* Fixed social bar */
 .socials {
     display: flex;
     flex-direction: column;
