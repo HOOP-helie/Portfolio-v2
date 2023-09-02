@@ -8,6 +8,7 @@
     #cursor,
     .cursor-circle {
         display: block;
+        z-index: -1;
     }
 
     #cursor {
@@ -22,7 +23,6 @@
     .cursor-circle {
         width: 2rem;
         height: 2rem;
-
         margin-top: -50%;
         margin-left: -50%;
         border-radius: 50%;
@@ -36,10 +36,10 @@
     }
 
     .cursor-circle-grow {
-        width: 10rem;
-        height: 10rem;
+        width: 8rem;
+        height: 8rem;
         mix-blend-mode: normal;
-        background: rgba(85, 81, 239, 0.8);
+        background: rgba(85, 81, 239, 0.7);
         filter: blur(35px);
     }
 }

@@ -205,7 +205,7 @@ p {
 
 .container {
   width: 80%;
-  max-width: 65rem;
+  max-width: 62rem;
   margin: 10rem auto;
 }
 
@@ -254,6 +254,7 @@ p {
   #cursor,
   .cursor-circle {
     display: block;
+    z-index: -1;
   }
   #cursor {
     top: 0;
@@ -273,10 +274,10 @@ p {
     transition: background-color 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s cubic-bezier(0.25, 1, 0.5, 1), width 0.5s cubic-bezier(0.25, 1, 0.5, 1), height 0.5s cubic-bezier(0.25, 1, 0.5, 1);
   }
   .cursor-circle-grow {
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     mix-blend-mode: normal;
-    background: rgba(85, 81, 239, 0.8);
+    background: rgba(85, 81, 239, 0.7);
     filter: blur(35px);
   }
 }
@@ -404,21 +405,17 @@ p {
 .my-background .title-section {
   max-width: 35rem;
 }
-
 .my-background .title-section .bg-orb {
   right: 15%;
 }
-
-.my-background--content {
+.my-background .my-background--content {
   margin-top: 4rem;
 }
-
-.my-background--content .background-tabs {
+.my-background .my-background--content .tabs {
   position: relative;
   border-bottom: 1px solid var(--secondary);
 }
-
-.my-background--content .background-tabs:before {
+.my-background .my-background--content .tabs:before {
   position: absolute;
   content: "";
   width: 8rem;
@@ -426,12 +423,10 @@ p {
   background-color: var(--primary);
   bottom: -1px;
 }
-
-.my-background .tabs-titles {
+.my-background .my-background--content .tabs .tabs-titles {
   display: flex;
 }
-
-.my-background .tabs-titles h3 {
+.my-background .my-background--content .tabs .tabs-titles h3 {
   display: flex;
   color: var(--secondary);
   width: 12rem;
@@ -439,26 +434,82 @@ p {
   transition: 0.3s;
   cursor: pointer;
 }
-
-.my-background .tabs-titles h3:hover {
+.my-background .my-background--content .tabs .tabs-titles h3:hover {
   color: var(--txt-light);
 }
-
-.my-background .tabs-titles .active {
+.my-background .my-background--content .tabs .tabs-titles h3.active {
   color: var(--txt-light);
 }
-
-.my-background .education--block {
+.my-background .education {
+  margin-top: 2rem;
+}
+.my-background .education .education--block {
   display: flex;
-  width: 80%;
+  max-width: 55rem;
+  padding: 1.5rem;
+  transition: 0.3s;
+  border-radius: 10px;
 }
-
-.my-background .education--block .date {
-  width: 20%;
+.my-background .education .education--block .date {
+  width: 30%;
+  max-width: 12rem;
+  font-size: 0.875rem;
 }
-
-.my-background .education--block .content {
-  width: 80%;
+.my-background .education .education--block .content {
+  width: 70%;
+}
+.my-background .education .education--block .content p {
+  font-size: 0.875rem;
+  margin-bottom: 0.8rem;
+}
+.my-background .education .education--block .content h4,
+.my-background .education .education--block .content .subtitle {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.my-background .education .education--block .content .subtitle {
+  margin-bottom: 0.5rem;
+}
+.my-background .education .education--block .content .title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  transition: 0.2s;
+}
+.my-background .education .education--block .content .title h4 {
+  transition: 0.2s;
+}
+.my-background .education .education--block .content .title img {
+  margin-right: 0.5rem;
+}
+.my-background .education .education--block .content .title i {
+  margin-left: 5px;
+  transform: rotate(-45deg) translate(0, 0);
+  transition: 0.3s;
+}
+.my-background .education .education--block .content .technologies {
+  max-width: 30rem;
+}
+.my-background .education .education--block .content .technologies li {
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.8rem;
+  border-radius: 10px;
+  background-color: hsla(227, 99%, 72%, 0.15);
+}
+.my-background .education .education--block:hover {
+  background: rgba(142, 150, 171, 0.05);
+}
+.my-background .education .education--block:hover .title h4,
+.my-background .education .education--block:hover i {
+  color: var(--primary);
+}
+.my-background .education .education--block:hover i {
+  transform: rotate(-45deg) translate(10px, 10px);
 }
 
 /*# sourceMappingURL=index.css.map */
