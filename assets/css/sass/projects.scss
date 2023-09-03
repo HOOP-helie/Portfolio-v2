@@ -1,9 +1,5 @@
 .projects {
 
-    a {
-        display: block;
-    }
-
     .title-section {
         max-width: 30rem;
         position: relative;
@@ -23,8 +19,10 @@
     .project {
         max-width: 40rem;
         margin-top: 5rem;
+        margin-bottom: 10rem;
         border: 1px solid rgba(255, 255, 255, 0.11);
 
+        // Project images
         .header {
             height: 20rem;
             background-size: cover;
@@ -38,26 +36,17 @@
             }
         }
 
+        // Project description
         .content {
-            padding: 3rem;
+            padding: 2.5rem 3rem;
 
             .title {
                 margin-bottom: 1rem;
-
 
                 p {
                     font-size: 1.25rem;
                     font-weight: 600;
                     color: var(--text-light)
-                }
-
-                &-link {
-                    display: flex;
-                    align-items: baseline;
-
-                    p {
-                        margin-right: 0.5rem;
-                    }
                 }
             }
 
@@ -71,6 +60,7 @@
             }
         }
 
+        // 1st project
         &:first-child {
             .header {
                 background-image: url("./../img/bg-1.png");
@@ -100,43 +90,26 @@
             }
         }
 
+        // 2nd project
         &:nth-child(2) {
-            cursor: pointer;
-            transition: 0.3s;
-
             .header {
                 background-image: url("./../img/bg-2.png");
 
                 img:first-child {
-                    height: 80%;
-                    left: 10%;
+                    width: 40%;
+                    left: 8%;
                     bottom: -2rem;
                 }
 
                 img:nth-child(2) {
                     width: 40%;
-                    right: 10%;
+                    right: 8%;
                     bottom: -1rem;
                 }
             }
 
 
             &:hover {
-                background-color: rgba(88, 88, 88, 0.1);
-
-                .title-link {
-
-                    p,
-                    i {
-                        color: var(--primary);
-                    }
-
-                    i {
-                        bottom: 5px;
-                        left: 5px;
-                    }
-                }
-
                 img:first-child {
                     bottom: -1px !important;
                 }
@@ -148,5 +121,78 @@
         }
 
 
+        // 3rd project
+        &:nth-child(3) {
+
+            .header {
+                background-image: url("./../img/bg-3.png");
+
+                img:first-child {
+                    width: 40%;
+                    left: 5%;
+                    bottom: -2rem;
+                }
+
+                img:nth-child(2) {
+                    width: 30%;
+                    right: 8%;
+                    bottom: -1rem;
+                }
+            }
+        }
+
+        // 4th project
+        &:nth-child(4) {
+
+            .header {
+                background-image: url("./../img/bg-1.png");
+
+                img:first-child {
+                    width: 40%;
+                    left: 5%;
+                    bottom: -2rem;
+                }
+
+                img:nth-child(2) {
+                    width: 30%;
+                    right: 8%;
+                    bottom: -1rem;
+                }
+            }
+        }
+
+    }
+
+    .project-with-link {
+        cursor: pointer;
+        transition: 0.3s;
+        display: block;
+
+        .title {
+            display: flex;
+            align-items: baseline;
+
+            p {
+                margin-right: 0.5rem;
+            }
+        }
+
+        &:hover {
+            background-color: rgba(88, 88, 88, 0.1);
+
+            .title {
+
+                p,
+                i {
+                    color: var(--primary);
+                }
+
+                i {
+                    bottom: 5px;
+                    left: 5px;
+                }
+            }
+
+        }
     }
 }

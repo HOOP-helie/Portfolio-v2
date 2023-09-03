@@ -191,6 +191,7 @@ p {
 .bg-orb {
   position: absolute;
   width: 25vw;
+  max-width: 25rem;
   aspect-ratio: 1;
   z-index: -1;
   background: rgba(52, 51, 141, 0.25);
@@ -549,9 +550,6 @@ p {
   left: 5px;
 }
 
-.projects a {
-  display: block;
-}
 .projects .title-section {
   max-width: 30rem;
   position: relative;
@@ -566,6 +564,7 @@ p {
 .projects .project {
   max-width: 40rem;
   margin-top: 5rem;
+  margin-bottom: 10rem;
   border: 1px solid rgba(255, 255, 255, 0.11);
 }
 .projects .project .header {
@@ -580,7 +579,7 @@ p {
   transition-duration: 0.5s;
 }
 .projects .project .content {
-  padding: 3rem;
+  padding: 2.5rem 3rem;
 }
 .projects .project .content .title {
   margin-bottom: 1rem;
@@ -589,13 +588,6 @@ p {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--text-light);
-}
-.projects .project .content .title-link {
-  display: flex;
-  align-items: baseline;
-}
-.projects .project .content .title-link p {
-  margin-right: 0.5rem;
 }
 .projects .project .content .description p {
   margin-bottom: 0.5rem;
@@ -624,39 +616,117 @@ p {
 .projects .project:first-child:hover img:nth-child(2) {
   bottom: -2rem !important;
 }
-.projects .project:nth-child(2) {
-  cursor: pointer;
-  transition: 0.3s;
-}
 .projects .project:nth-child(2) .header {
   background-image: url("./../img/bg-2.png");
 }
 .projects .project:nth-child(2) .header img:first-child {
-  height: 80%;
-  left: 10%;
+  width: 40%;
+  left: 8%;
   bottom: -2rem;
 }
 .projects .project:nth-child(2) .header img:nth-child(2) {
   width: 40%;
-  right: 10%;
+  right: 8%;
   bottom: -1rem;
-}
-.projects .project:nth-child(2):hover {
-  background-color: rgba(88, 88, 88, 0.1);
-}
-.projects .project:nth-child(2):hover .title-link p,
-.projects .project:nth-child(2):hover .title-link i {
-  color: var(--primary);
-}
-.projects .project:nth-child(2):hover .title-link i {
-  bottom: 5px;
-  left: 5px;
 }
 .projects .project:nth-child(2):hover img:first-child {
   bottom: -1px !important;
 }
 .projects .project:nth-child(2):hover img:nth-child(2) {
   bottom: -1px !important;
+}
+.projects .project:nth-child(3) .header {
+  background-image: url("./../img/bg-3.png");
+}
+.projects .project:nth-child(3) .header img:first-child {
+  width: 40%;
+  left: 5%;
+  bottom: -2rem;
+}
+.projects .project:nth-child(3) .header img:nth-child(2) {
+  width: 30%;
+  right: 8%;
+  bottom: -1rem;
+}
+.projects .project:nth-child(4) .header {
+  background-image: url("./../img/bg-1.png");
+}
+.projects .project:nth-child(4) .header img:first-child {
+  width: 40%;
+  left: 5%;
+  bottom: -2rem;
+}
+.projects .project:nth-child(4) .header img:nth-child(2) {
+  width: 30%;
+  right: 8%;
+  bottom: -1rem;
+}
+.projects .project-with-link {
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+}
+.projects .project-with-link .title {
+  display: flex;
+  align-items: baseline;
+}
+.projects .project-with-link .title p {
+  margin-right: 0.5rem;
+}
+.projects .project-with-link:hover {
+  background-color: rgba(88, 88, 88, 0.1);
+}
+.projects .project-with-link:hover .title p,
+.projects .project-with-link:hover .title i {
+  color: var(--primary);
+}
+.projects .project-with-link:hover .title i {
+  bottom: 5px;
+  left: 5px;
+}
+
+.contact {
+  display: flex;
+  margin-top: 15rem;
+}
+.contact > * {
+  width: 100%;
+}
+.contact .cta {
+  position: relative;
+  font-weight: 700;
+}
+.contact .cta P {
+  font-size: 2.5rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+.contact .cta a {
+  font-size: 2rem;
+  color: var(--primary);
+}
+.contact .cta .bg-orb {
+  top: -50%;
+  left: -20%;
+  max-width: 20rem;
+}
+.contact .visuals {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.contact .visuals .enveloppe,
+.contact .visuals .lightbulb {
+  position: absolute;
+}
+.contact .visuals .lightbulb {
+  left: 10%;
+  bottom: 0;
+}
+.contact .visuals .enveloppe {
+  right: 10%;
+  top: -10%;
 }
 
 /*# sourceMappingURL=index.css.map */

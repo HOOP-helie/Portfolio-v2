@@ -1,0 +1,53 @@
+.contact {
+    display: flex;
+    margin-top: 15rem;
+
+    >* {
+        width: 100%;
+    }
+
+    .cta {
+        position: relative;
+
+        font-weight: 700;
+
+        P {
+            font-size: 2.5rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        a {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .bg-orb {
+            top: -50%;
+            left: -20%;
+            max-width: 20rem;
+        }
+    }
+
+    .visuals {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .enveloppe,
+        .lightbulb {
+            position: absolute;
+        }
+
+        .lightbulb {
+            left: 10%;
+            bottom: 0;
+        }
+
+        .enveloppe {
+            right: 10%;
+            top: -10%;
+        }
+    }
+}

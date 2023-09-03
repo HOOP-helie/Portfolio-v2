@@ -46,6 +46,7 @@ p {
 .bg-orb {
     position: absolute;
     width: 25vw;
+    max-width: 25rem;
     aspect-ratio: 1;
     z-index: -1;
     background: rgba(52, 51, 141, 0.25);
