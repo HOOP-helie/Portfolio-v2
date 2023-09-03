@@ -47,10 +47,21 @@
         }
     }
 
-    .education {
+    .education,
+    .experience {
         margin-top: 2rem;
 
-        .education--block {
+        &:hover {
+            .block {
+                opacity: 0.5;
+            }
+        }
+
+        a {
+            display: inline-block;
+        }
+
+        .block {
             display: flex;
             max-width: 55rem;
             padding: 1.5rem;
@@ -98,36 +109,17 @@
                     }
 
                     i {
-                        position: relative;
-                        transform: rotate(-45deg);
-                        transition-duration: 0.2s;
-                        transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-                        font-size: 0.8rem;
                         bottom: -2px;
-                        left: 0;
-
                     }
+
                 }
 
-                .technologies {
-                    max-width: 32rem;
 
-                    li {
-                        display: inline-block;
-                        color: var(--primary);
-                        font-weight: 600;
-                        font-size: 0.875rem;
-                        padding: 0.5rem 1rem;
-                        margin-right: 0.5rem;
-                        margin-bottom: 0.8rem;
-                        border-radius: 12px;
-                        background-color: hsla(227, 99%, 72%, 0.15);
-                    }
-                }
             }
 
             &:hover {
                 background: rgba(142, 150, 171, 0.05);
+                opacity: 1;
 
                 .content {
 

@@ -100,3 +100,31 @@ p {
     color: var(--primary);
     opacity: 1;
 }
+
+
+
+.technologies {
+    max-width: 31rem;
+
+    li {
+        display: inline-block;
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+        margin-right: 0.4rem;
+        margin-bottom: 0.8rem;
+        border-radius: 12px;
+        background-color: hsla(227, 99%, 72%, 0.15);
+    }
+}
+
+.title i {
+    position: relative;
+    transform: rotate(-45deg);
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    font-size: 0.8rem;
+    bottom: 0;
+    left: 0;
+}

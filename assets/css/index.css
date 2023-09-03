@@ -245,6 +245,31 @@ p {
   opacity: 1;
 }
 
+.technologies {
+  max-width: 31rem;
+}
+.technologies li {
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  margin-right: 0.4rem;
+  margin-bottom: 0.8rem;
+  border-radius: 12px;
+  background-color: hsla(227, 99%, 72%, 0.15);
+}
+
+.title i {
+  position: relative;
+  transform: rotate(-45deg);
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.8rem;
+  bottom: 0;
+  left: 0;
+}
+
 #cursor,
 .cursor-circle {
   display: none;
@@ -440,10 +465,20 @@ p {
 .my-background .my-background--content .tabs .tabs-titles h3.active {
   color: var(--txt-light);
 }
-.my-background .education {
+.my-background .education,
+.my-background .experience {
   margin-top: 2rem;
 }
-.my-background .education .education--block {
+.my-background .education:hover .block,
+.my-background .experience:hover .block {
+  opacity: 0.5;
+}
+.my-background .education a,
+.my-background .experience a {
+  display: inline-block;
+}
+.my-background .education .block,
+.my-background .experience .block {
   display: flex;
   max-width: 55rem;
   padding: 1.5rem;
@@ -451,72 +486,177 @@ p {
   border-radius: 10px;
   margin-bottom: 3rem;
 }
-.my-background .education .education--block .date {
+.my-background .education .block .date,
+.my-background .experience .block .date {
   width: 30%;
   max-width: 12rem;
   font-size: 0.875rem;
 }
-.my-background .education .education--block .content {
+.my-background .education .block .content,
+.my-background .experience .block .content {
   width: 70%;
 }
-.my-background .education .education--block .content p {
+.my-background .education .block .content p,
+.my-background .experience .block .content p {
   font-size: 0.875rem;
   margin-bottom: 0.8rem;
 }
-.my-background .education .education--block .content h4,
-.my-background .education .education--block .content .subtitle {
+.my-background .education .block .content h4,
+.my-background .education .block .content .subtitle,
+.my-background .experience .block .content h4,
+.my-background .experience .block .content .subtitle {
   font-weight: 700;
   font-size: 1rem;
 }
-.my-background .education .education--block .content .subtitle {
+.my-background .education .block .content .subtitle,
+.my-background .experience .block .content .subtitle {
   margin-bottom: 0.5rem;
 }
-.my-background .education .education--block .content .title {
+.my-background .education .block .content .title,
+.my-background .experience .block .content .title {
   display: flex;
   align-items: center;
   margin-bottom: 0.8rem;
   transition: 0.2s;
 }
-.my-background .education .education--block .content .title h4 {
+.my-background .education .block .content .title h4,
+.my-background .experience .block .content .title h4 {
   transition: 0.2s;
   margin-right: 8px;
 }
-.my-background .education .education--block .content .title img {
+.my-background .education .block .content .title img,
+.my-background .experience .block .content .title img {
   margin-right: 0.5rem;
 }
-.my-background .education .education--block .content .title i {
-  position: relative;
-  transform: rotate(-45deg);
-  transition-duration: 0.2s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  font-size: 0.8rem;
+.my-background .education .block .content .title i,
+.my-background .experience .block .content .title i {
   bottom: -2px;
-  left: 0;
 }
-.my-background .education .education--block .content .technologies {
-  max-width: 32rem;
-}
-.my-background .education .education--block .content .technologies li {
-  display: inline-block;
-  color: var(--primary);
-  font-weight: 600;
-  font-size: 0.875rem;
-  padding: 0.5rem 1rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.8rem;
-  border-radius: 12px;
-  background-color: hsla(227, 99%, 72%, 0.15);
-}
-.my-background .education .education--block:hover {
+.my-background .education .block:hover,
+.my-background .experience .block:hover {
   background: rgba(142, 150, 171, 0.05);
+  opacity: 1;
 }
-.my-background .education .education--block:hover .content .title h4,
-.my-background .education .education--block:hover .content i {
+.my-background .education .block:hover .content .title h4,
+.my-background .education .block:hover .content i,
+.my-background .experience .block:hover .content .title h4,
+.my-background .experience .block:hover .content i {
   color: var(--primary);
 }
-.my-background .education .education--block:hover .content i {
+.my-background .education .block:hover .content i,
+.my-background .experience .block:hover .content i {
   bottom: 2px;
   left: 5px;
+}
+
+.projects a {
+  display: block;
+}
+.projects .title-section {
+  max-width: 30rem;
+  position: relative;
+}
+.projects .title-section .bg-orb {
+  left: -40%;
+  top: -25%;
+}
+.projects .projects-list .project:nth-child(2n) {
+  margin-left: auto;
+}
+.projects .project {
+  max-width: 40rem;
+  margin-top: 5rem;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+}
+.projects .project .header {
+  height: 20rem;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+.projects .project .header img {
+  position: absolute;
+  transition-timing-function: cubic-bezier(0.31, 0.48, 0.37, 1.01);
+  transition-duration: 0.5s;
+}
+.projects .project .content {
+  padding: 3rem;
+}
+.projects .project .content .title {
+  margin-bottom: 1rem;
+}
+.projects .project .content .title p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+.projects .project .content .title-link {
+  display: flex;
+  align-items: baseline;
+}
+.projects .project .content .title-link p {
+  margin-right: 0.5rem;
+}
+.projects .project .content .description p {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+.projects .project .content .technologies {
+  margin-top: 1.2rem;
+}
+.projects .project:first-child .header {
+  background-image: url("./../img/bg-1.png");
+}
+.projects .project:first-child .header img:first-child {
+  right: 10%;
+  width: 50%;
+  bottom: -2rem;
+  z-index: 1;
+}
+.projects .project:first-child .header img:nth-child(2) {
+  width: 70%;
+  left: 10%;
+  bottom: -3rem;
+}
+.projects .project:first-child:hover img:first-child {
+  bottom: -1px !important;
+}
+.projects .project:first-child:hover img:nth-child(2) {
+  bottom: -2rem !important;
+}
+.projects .project:nth-child(2) {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.projects .project:nth-child(2) .header {
+  background-image: url("./../img/bg-2.png");
+}
+.projects .project:nth-child(2) .header img:first-child {
+  height: 80%;
+  left: 10%;
+  bottom: -2rem;
+}
+.projects .project:nth-child(2) .header img:nth-child(2) {
+  width: 40%;
+  right: 10%;
+  bottom: -1rem;
+}
+.projects .project:nth-child(2):hover {
+  background-color: rgba(88, 88, 88, 0.1);
+}
+.projects .project:nth-child(2):hover .title-link p,
+.projects .project:nth-child(2):hover .title-link i {
+  color: var(--primary);
+}
+.projects .project:nth-child(2):hover .title-link i {
+  bottom: 5px;
+  left: 5px;
+}
+.projects .project:nth-child(2):hover img:first-child {
+  bottom: -1px !important;
+}
+.projects .project:nth-child(2):hover img:nth-child(2) {
+  bottom: -1px !important;
 }
 
 /*# sourceMappingURL=index.css.map */

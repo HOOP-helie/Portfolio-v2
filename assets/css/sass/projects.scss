@@ -1,0 +1,152 @@
+.projects {
+
+    a {
+        display: block;
+    }
+
+    .title-section {
+        max-width: 30rem;
+        position: relative;
+
+        .bg-orb {
+            left: -40%;
+            top: -25%;
+        }
+    }
+
+    .projects-list {
+        .project:nth-child(2n) {
+            margin-left: auto;
+        }
+    }
+
+    .project {
+        max-width: 40rem;
+        margin-top: 5rem;
+        border: 1px solid rgba(255, 255, 255, 0.11);
+
+        .header {
+            height: 20rem;
+            background-size: cover;
+            overflow: hidden;
+            position: relative;
+
+            img {
+                position: absolute;
+                transition-timing-function: cubic-bezier(.31, .48, .37, 1.01);
+                transition-duration: 0.5s;
+            }
+        }
+
+        .content {
+            padding: 3rem;
+
+            .title {
+                margin-bottom: 1rem;
+
+
+                p {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    color: var(--text-light)
+                }
+
+                &-link {
+                    display: flex;
+                    align-items: baseline;
+
+                    p {
+                        margin-right: 0.5rem;
+                    }
+                }
+            }
+
+            .description p {
+                margin-bottom: 0.5rem;
+                font-size: 0.875rem;
+            }
+
+            .technologies {
+                margin-top: 1.2rem;
+            }
+        }
+
+        &:first-child {
+            .header {
+                background-image: url("./../img/bg-1.png");
+
+                img:first-child {
+                    right: 10%;
+                    width: 50%;
+                    bottom: -2rem;
+                    z-index: 1;
+                }
+
+                img:nth-child(2) {
+                    width: 70%;
+                    left: 10%;
+                    bottom: -3rem;
+                }
+            }
+
+            &:hover {
+                img:first-child {
+                    bottom: -1px !important;
+                }
+
+                img:nth-child(2) {
+                    bottom: -2rem !important;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            cursor: pointer;
+            transition: 0.3s;
+
+            .header {
+                background-image: url("./../img/bg-2.png");
+
+                img:first-child {
+                    height: 80%;
+                    left: 10%;
+                    bottom: -2rem;
+                }
+
+                img:nth-child(2) {
+                    width: 40%;
+                    right: 10%;
+                    bottom: -1rem;
+                }
+            }
+
+
+            &:hover {
+                background-color: rgba(88, 88, 88, 0.1);
+
+                .title-link {
+
+                    p,
+                    i {
+                        color: var(--primary);
+                    }
+
+                    i {
+                        bottom: 5px;
+                        left: 5px;
+                    }
+                }
+
+                img:first-child {
+                    bottom: -1px !important;
+                }
+
+                img:nth-child(2) {
+                    bottom: -1px !important;
+                }
+            }
+        }
+
+
+    }
+}
