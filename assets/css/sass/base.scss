@@ -20,7 +20,8 @@ h1 {
 }
 
 h1,
-h2 {
+h2,
+h4 {
     line-height: 1.4;
 }
 
@@ -45,11 +46,13 @@ p {
 
 .bg-orb {
     position: absolute;
-    width: 25vw;
+    width: 20vw;
+    min-width: 20rem;
     max-width: 25rem;
     aspect-ratio: 1;
     z-index: -1;
-    background: rgba(52, 51, 141, 0.25);
+    transform: translate(-50%, -50%);
+    background: rgba(52, 51, 141, 0.3);
     filter: blur(130px);
 }
 
@@ -62,7 +65,8 @@ p {
 .container {
     width: 80%;
     max-width: 62rem;
-    margin: 10rem auto;
+    margin: auto;
+    margin-bottom: 10rem;
 }
 
 
@@ -128,4 +132,62 @@ p {
     font-size: 0.8rem;
     bottom: 0;
     left: 0;
+}
+
+
+footer {
+    color: var(--secondary);
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    a {
+        color: var(--secondary);
+        opacity: 0.5;
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        display: inline-block;
+        transition: 0.2s;
+
+        &:hover {
+            color: var(--primary);
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin-bottom: 8rem;
+
+    }
+
+    .bg-orb {
+        background: rgba(52, 51, 141, 0.5);
+        width: 50vw;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .socials {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .container {
+        width: 90%;
+        margin-bottom: 5rem;
+
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+
 }

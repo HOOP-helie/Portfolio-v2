@@ -3,6 +3,7 @@
     .title-section {
         max-width: 30rem;
         position: relative;
+        margin-bottom: 5rem;
 
         .bg-orb {
             left: -40%;
@@ -18,7 +19,6 @@
 
     .project {
         max-width: 40rem;
-        margin-top: 5rem;
         margin-bottom: 10rem;
         border: 1px solid rgba(255, 255, 255, 0.11);
 
@@ -128,15 +128,16 @@
                 background-image: url("./../img/bg-3.png");
 
                 img:first-child {
-                    width: 40%;
+                    height: 90%;
                     left: 5%;
-                    bottom: -2rem;
+                    z-index: 1;
+                    bottom: 0;
                 }
 
                 img:nth-child(2) {
-                    width: 30%;
+                    height: 100%;
                     right: 8%;
-                    bottom: -1rem;
+
                 }
             }
         }
@@ -193,6 +194,97 @@
                 }
             }
 
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .projects {
+        .title-section {
+            margin-bottom: 2rem;
+        }
+
+        .project {
+            margin-bottom: 5rem;
+
+            .header {
+                height: 15rem;
+            }
+
+            // 1st project
+            &:first-child {
+                .header {
+                    img:first-child {
+                        right: 5%;
+                        height: 90%;
+                        width: auto;
+                        bottom: 0;
+                        max-width: 15rem;
+                    }
+
+                    img:nth-child(2) {
+                        left: 5%;
+                        max-width: 20rem;
+                        bottom: 0;
+                    }
+                }
+            }
+
+            // 2nd project
+            &:nth-child(2) {
+                .header {
+                    img:first-child {
+                        height: 90%;
+                        width: auto;
+                        bottom: 0;
+                        left: 10%;
+                    }
+
+                    img:nth-child(2) {
+                        width: 50%;
+                        max-width: 13rem;
+                        bottom: 0;
+                        right: 10%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .projects {
+        .project {
+
+            .content {
+                padding: 1.5rem 0.8rem;
+            }
+
+            // 1st project
+            &:first-child {
+                .header {
+                    img:nth-child(2) {
+                        height: 45%;
+                        width: auto;
+                    }
+                }
+            }
+
+            // 2nd project
+            &:nth-child(2) {
+                .header {
+                    img:first-child {
+                        left: 5%;
+                    }
+
+                    img:nth-child(2) {
+                        right: 5%;
+                    }
+                }
+            }
         }
     }
 }

@@ -1,13 +1,11 @@
 .contact {
     display: flex;
     margin-top: 15rem;
-
-    >* {
-        width: 100%;
-    }
+    max-width: 65rem;
 
     .cta {
         position: relative;
+        width: 60%;
 
         font-weight: 700;
 
@@ -20,6 +18,22 @@
         a {
             font-size: 2rem;
             color: var(--primary);
+
+            i {
+                position: relative;
+                transform: rotate(-45deg);
+                transition-duration: 0.2s;
+                transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+                font-size: 1.2rem;
+                bottom: 0;
+                left: 0;
+                transition: 0.5s;
+            }
+
+            &:hover i {
+                bottom: 10px;
+                left: 10px;
+            }
         }
 
         .bg-orb {
@@ -30,6 +44,7 @@
     }
 
     .visuals {
+        width: 40%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -41,13 +56,58 @@
         }
 
         .lightbulb {
-            left: 10%;
+            left: 0;
             bottom: 0;
+            max-width: 8rem;
+            width: 30%;
         }
 
         .enveloppe {
-            right: 10%;
+
+            right: 0;
             top: -10%;
+        }
+
+        .gradient-orb {
+            width: 100%;
+            max-width: 20rem;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .contact {
+        margin-top: 8rem;
+        flex-direction: column;
+
+
+        .cta {
+            width: 100%;
+            text-align: center;
+        }
+
+        .visuals {
+            width: 100%;
+            max-width: 25rem;
+            margin: auto;
+            margin-top: 3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .contact {
+
+        .cta {
+            p {
+                font-size: 2rem;
+            }
+
+            a {
+                font-size: 1.5rem;
+            }
         }
     }
 }

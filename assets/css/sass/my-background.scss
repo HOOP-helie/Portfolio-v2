@@ -1,10 +1,14 @@
 .my-background {
 
+    position: relative;
+
     .title-section {
         max-width: 35rem;
 
+
         .bg-orb {
-            right: 15%;
+            right: 0;
+            transform: translate(20%, -20%);
         }
     }
 
@@ -114,6 +118,9 @@
 
                 }
 
+                .technologies {
+                    margin-top: 1rem;
+                }
 
             }
 
@@ -137,4 +144,35 @@
 
         }
     }
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .my-background {
+        .title-section {
+            max-width: 30rem;
+        }
+
+        .my-background--content {
+            margin-top: 2rem;
+
+            .block {
+                display: block;
+                padding: 0;
+                margin-bottom: 3rem;
+
+                .date {
+                    margin-bottom: 1rem;
+                    width: 100%;
+                }
+
+                .content {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
 }
