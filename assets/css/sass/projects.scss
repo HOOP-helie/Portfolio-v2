@@ -1,4 +1,4 @@
-.projects {
+#projects {
 
     .title-section {
         max-width: 30rem;
@@ -196,7 +196,7 @@
 
 @media screen and (max-width: 768px) {
 
-    .projects {
+    #projects {
         .title-section {
             margin-bottom: 2rem;
         }
@@ -251,7 +251,7 @@
 
 
 @media screen and (max-width: 450px) {
-    .projects {
+    #projects {
         .project {
 
             .content {

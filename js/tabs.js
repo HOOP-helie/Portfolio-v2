@@ -1,7 +1,7 @@
 addEventListener("DOMContentLoaded", () => {
 
     let titles = document.querySelectorAll('.tabs-titles h3');
-    let categories = document.querySelectorAll('.my-background .category');
+    let categories = document.querySelectorAll('#my-background .category');
 
     for (let index = 0; index < titles.length; index++) {
 
