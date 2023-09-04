@@ -1,54 +1,52 @@
-.about .title-section {
-    max-width: 25rem;
-    position: relative;
-}
+#about {
+    .title-section {
+        max-width: 25rem;
+        position: relative;
+    }
 
-.about .title-section .bg-orb {
-    left: 0;
-    top: 0%;
-}
+    .about--content {
+        display: flex;
 
-.about--content {
-    display: flex;
-}
+        >* {
+            width: 100%;
+        }
 
-.about--content>* {
-    width: 100%;
-}
+        p {
+            margin-bottom: 1.5rem;
+        }
 
-.about--content p {
-    margin-bottom: 1.5rem;
-}
+        .recent-skills {
+            p {
+                margin-bottom: 1.5rem;
+            }
 
-.about--content .recent-skills p {
-    margin-bottom: 1.5rem;
-}
+            ul {
+                color: var(--text-light);
+                display: grid;
+                grid-template-columns: repeat(2, minmax(140px, 200px));
+                list-style: none;
+            }
 
-.about--content .recent-skills ul {
-    color: var(--text-light);
-    display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
-    list-style: none;
-}
+            li {
+                margin-bottom: 1.2rem;
+                padding-left: 1.5rem;
+                position: relative;
 
-.about--content .recent-skills li {
-    margin-bottom: 1.2rem;
-    padding-left: 1.5rem;
-    position: relative;
+                &:before {
+                    content: "▹";
+                    position: absolute;
+                    left: 0px;
+                    font-size: 1.5rem;
+                    color: var(--primary);
+                    line-height: 15px;
+                }
+            }
+        }
+    }
 }
-
-.about--content .recent-skills li:before {
-    content: "▹";
-    position: absolute;
-    left: 0px;
-    font-size: 1.5rem;
-    color: var(--primary);
-    line-height: 15px;
-}
-
 
 @media screen and (max-width: 768px) {
-    .about {
+    #about {
         .about--content {
             margin-top: 1rem;
 

@@ -28,6 +28,15 @@
             href=""><i class="fa-brands fa-linkedin-in"></i></a><a href=""><i class="fa-brands fa-gitlab"></i></a>
         <span></span>
     </div>
+    <nav class="nav-desktop">
+        <ul>
+            <li><a href="#about"><span>01.</span>À propos</a></li>
+            <li><span>02.</span>Parcours</li>
+            <li><span>03.</span>Projets</li>
+            <li><a href="">Mon CV</a></li>
+
+        </ul>
+    </nav>
     <main>
         <!-- HERO SECTION -->
         <header class="hero-section">
@@ -55,9 +64,8 @@
 
 
         <!-- ABOUT SECTION -->
-        <section class="about container">
-            <div class="title-section">
-                <div class="bg-orb"></div>
+        <section id="about" class="container">
+            <div class="title-section orb-left">
                 <p class="subheading">À propos</p>
                 <h2>Découvrez-en davantage à mon sujet</h2>
             </div>
@@ -102,9 +110,9 @@
         </section>
 
         <!-- MY BACKGROUND SECTION -->
-        <section class="my-background container">
-            <div class="title-section">
-                <div class="bg-orb"></div>
+        <section class="my-background container orb-right">
+            <div class="title-section ">
+
                 <p class="subheading">Mon parcours</p>
                 <h2>Ou comment j'en suis arrivée là</h2>
             </div>
@@ -116,7 +124,7 @@
                     </div>
                 </div>
                 <!-- EDUCATION -->
-                <div class="education">
+                <div class="category education ">
                     <a href="https://www.campusdulac.com/" target=_blank>
                         <div class="block">
                             <div class="date">
@@ -180,7 +188,7 @@
                     </a>
                 </div>
                 <!-- EXPERIENCE -->
-                <div class="experience">
+                <div class="category experience hidden removed">
                     <a href="https://devolie.fr/" target=_blank>
                         <div class="block">
                             <div class="date">
@@ -217,8 +225,7 @@
 
         <!-- MY PROJECTS SECTION -->
         <section class="projects container">
-            <div class="title-section">
-                <div class="bg-orb"></div>
+            <div class="title-section orb-left">
                 <p class="subheading">Mes projets</p>
                 <h2>Un petit aperçu de ce que j’ai pu réaliser</h2>
             </div>
@@ -341,8 +348,7 @@
 
 
         <section class="contact container">
-            <div class="cta">
-                <div class="bg-orb"></div>
+            <div class="cta orb-left">
                 <p>Vous avez un projet ?</p>
                 <a href="mailto:hornn.ophelie@gmail.com">Parlons-en ! <i class="fa-solid fa-arrow-right"></i></a>
             </div>
@@ -367,6 +373,7 @@
     <script src="js/shift-bg/shift.js"></script>
     <script src="js/shift-bg/noise.min.js"></script>
     <script src="js/cursor.js"></script>
+    <script src="js/tabs.js"></script>
 </body>
 
 </html>

@@ -189,16 +189,28 @@ p {
   color: var(--text-light);
 }
 
-.bg-orb {
+.orb-left,
+.orb-right {
+  position: relative;
+}
+
+.orb-left:before,
+.orb-right:before {
+  content: "";
   position: absolute;
   width: 20vw;
-  min-width: 20rem;
-  max-width: 25rem;
+  min-width: 15rem;
+  max-width: 20rem;
   aspect-ratio: 1;
   z-index: -1;
   transform: translate(-50%, -50%);
-  background: rgba(52, 51, 141, 0.3);
-  filter: blur(130px);
+  background: rgba(52, 51, 141, 0.25);
+  filter: blur(120px);
+}
+
+.orb-right:before {
+  right: 0;
+  transform: translate(0);
 }
 
 .subheading {
@@ -280,6 +292,7 @@ footer {
   margin: auto;
   text-align: center;
   margin-bottom: 2rem;
+  width: 90%;
 }
 footer a {
   color: var(--secondary);
@@ -298,10 +311,6 @@ footer a:hover {
   .container {
     margin-bottom: 8rem;
   }
-  .bg-orb {
-    background: rgba(52, 51, 141, 0.5);
-    width: 50vw;
-  }
   h2 {
     font-size: 2.2rem;
   }
@@ -316,6 +325,9 @@ footer a:hover {
   }
   h2 {
     font-size: 1.75rem;
+  }
+  footer {
+    font-size: 0.875rem;
   }
 }
 #cursor,
@@ -358,7 +370,7 @@ footer a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: auto;
   max-width: 90rem;
   width: 90%;
@@ -394,6 +406,7 @@ footer a:hover {
 .hero-section .visuals .visuals-box {
   max-height: 40rem;
   position: relative;
+  margin-bottom: 5rem;
 }
 .hero-section .visuals .laptop,
 .hero-section .visuals .phone {
@@ -480,46 +493,34 @@ footer a:hover {
     width: 55%;
   }
 }
-.about .title-section {
+#about .title-section {
   max-width: 25rem;
   position: relative;
 }
-
-.about .title-section .bg-orb {
-  left: 0;
-  top: 0%;
-}
-
-.about--content {
+#about .about--content {
   display: flex;
 }
-
-.about--content > * {
+#about .about--content > * {
   width: 100%;
 }
-
-.about--content p {
+#about .about--content p {
   margin-bottom: 1.5rem;
 }
-
-.about--content .recent-skills p {
+#about .about--content .recent-skills p {
   margin-bottom: 1.5rem;
 }
-
-.about--content .recent-skills ul {
+#about .about--content .recent-skills ul {
   color: var(--text-light);
   display: grid;
   grid-template-columns: repeat(2, minmax(140px, 200px));
   list-style: none;
 }
-
-.about--content .recent-skills li {
+#about .about--content .recent-skills li {
   margin-bottom: 1.2rem;
   padding-left: 1.5rem;
   position: relative;
 }
-
-.about--content .recent-skills li:before {
+#about .about--content .recent-skills li:before {
   content: "▹";
   position: absolute;
   left: 0px;
@@ -529,10 +530,10 @@ footer a:hover {
 }
 
 @media screen and (max-width: 768px) {
-  .about .about--content {
+  #about .about--content {
     margin-top: 1rem;
   }
-  .about .about--content div:first-child {
+  #about .about--content div:first-child {
     display: none;
   }
 }
@@ -542,10 +543,6 @@ footer a:hover {
 .my-background .title-section {
   max-width: 35rem;
 }
-.my-background .title-section .bg-orb {
-  right: 0;
-  transform: translate(20%, -20%);
-}
 .my-background .my-background--content {
   margin-top: 4rem;
 }
@@ -553,24 +550,27 @@ footer a:hover {
   position: relative;
   border-bottom: 1px solid var(--secondary);
 }
-.my-background .my-background--content .tabs:before {
-  position: absolute;
-  content: "";
-  width: 8rem;
-  height: 1px;
-  background-color: var(--primary);
-  bottom: -1px;
-}
 .my-background .my-background--content .tabs .tabs-titles {
   display: flex;
 }
 .my-background .my-background--content .tabs .tabs-titles h3 {
+  position: relative;
   display: flex;
   color: var(--secondary);
   width: 12rem;
   padding-bottom: 1rem;
   transition: 0.3s;
   cursor: pointer;
+  transition: 0.2s;
+}
+.my-background .my-background--content .tabs .tabs-titles h3:before {
+  transition: 0.4s;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--primary);
+  bottom: -1px;
 }
 .my-background .my-background--content .tabs .tabs-titles h3:hover {
   color: var(--txt-light);
@@ -578,20 +578,28 @@ footer a:hover {
 .my-background .my-background--content .tabs .tabs-titles h3.active {
   color: var(--txt-light);
 }
-.my-background .education,
-.my-background .experience {
-  margin-top: 2rem;
+.my-background .my-background--content .tabs .tabs-titles h3.active:before {
+  width: 70%;
 }
-.my-background .education:hover .block,
-.my-background .experience:hover .block {
+.my-background .category {
+  margin-top: 2rem;
+  display: block;
+  opacity: 1;
+  transition: opacity 1s;
+}
+.my-background .category.hidden {
+  opacity: 0;
+}
+.my-background .category.removed {
+  display: none;
+}
+.my-background .category:hover .block {
   opacity: 0.5;
 }
-.my-background .education a,
-.my-background .experience a {
+.my-background .category a {
   display: inline-block;
 }
-.my-background .education .block,
-.my-background .experience .block {
+.my-background .category .block {
   display: flex;
   max-width: 55rem;
   padding: 1.5rem;
@@ -599,69 +607,54 @@ footer a:hover {
   border-radius: 10px;
   margin-bottom: 3rem;
 }
-.my-background .education .block .date,
-.my-background .experience .block .date {
+.my-background .category .block .date {
   width: 30%;
   max-width: 12rem;
   font-size: 0.875rem;
 }
-.my-background .education .block .content,
-.my-background .experience .block .content {
+.my-background .category .block .content {
   width: 70%;
 }
-.my-background .education .block .content p,
-.my-background .experience .block .content p {
+.my-background .category .block .content p {
   font-size: 0.875rem;
   margin-bottom: 0.8rem;
 }
-.my-background .education .block .content h4,
-.my-background .education .block .content .subtitle,
-.my-background .experience .block .content h4,
-.my-background .experience .block .content .subtitle {
+.my-background .category .block .content h4,
+.my-background .category .block .content .subtitle {
   font-weight: 700;
   font-size: 1rem;
 }
-.my-background .education .block .content .subtitle,
-.my-background .experience .block .content .subtitle {
+.my-background .category .block .content .subtitle {
   margin-bottom: 0.5rem;
 }
-.my-background .education .block .content .title,
-.my-background .experience .block .content .title {
+.my-background .category .block .content .title {
   display: flex;
   align-items: center;
   margin-bottom: 0.8rem;
   transition: 0.2s;
 }
-.my-background .education .block .content .title h4,
-.my-background .experience .block .content .title h4 {
+.my-background .category .block .content .title h4 {
   transition: 0.2s;
   margin-right: 8px;
 }
-.my-background .education .block .content .title img,
-.my-background .experience .block .content .title img {
+.my-background .category .block .content .title img {
   margin-right: 0.5rem;
 }
-.my-background .education .block .content .title i,
-.my-background .experience .block .content .title i {
+.my-background .category .block .content .title i {
   bottom: -2px;
 }
-.my-background .education .block .content .technologies,
-.my-background .experience .block .content .technologies {
+.my-background .category .block .content .technologies {
   margin-top: 1rem;
 }
-.my-background .education .block:hover,
-.my-background .experience .block:hover {
+.my-background .category .block:hover {
   background: rgba(142, 150, 171, 0.05);
   opacity: 1;
 }
-.my-background .education .block:hover .content .title h4,
-.my-background .education .block:hover .content i,
-.my-background .experience .block:hover .content .title h4,
-.my-background .experience .block:hover .content i {
+.my-background .category .block:hover .content .title h4,
+.my-background .category .block:hover .content i {
   color: var(--primary);
 }
-.my-background .education .block:hover .content i,
-.my-background .experience .block:hover .content i {
+.my-background .category .block:hover .content i {
   bottom: 2px;
   left: 5px;
 }
@@ -690,10 +683,6 @@ footer a:hover {
   max-width: 30rem;
   position: relative;
   margin-bottom: 5rem;
-}
-.projects .title-section .bg-orb {
-  left: -40%;
-  top: -25%;
 }
 .projects .projects-list .project:nth-child(2n) {
   margin-left: auto;
@@ -874,7 +863,7 @@ footer a:hover {
 .contact {
   display: flex;
   margin-top: 15rem;
-  max-width: 65rem;
+  max-width: 62rem;
 }
 .contact .cta {
   position: relative;
@@ -904,11 +893,6 @@ footer a:hover {
   bottom: 10px;
   left: 10px;
 }
-.contact .cta .bg-orb {
-  top: -50%;
-  left: -20%;
-  max-width: 20rem;
-}
 .contact .visuals {
   width: 40%;
   display: flex;
@@ -923,12 +907,15 @@ footer a:hover {
 .contact .visuals .lightbulb {
   left: 0;
   bottom: 0;
-  max-width: 8rem;
+  max-width: 7rem;
   width: 30%;
 }
 .contact .visuals .enveloppe {
-  right: 0;
+  right: -4%;
   top: -10%;
+  width: 50%;
+  min-width: 10rem;
+  max-width: 12rem;
 }
 .contact .visuals .gradient-orb {
   width: 100%;
@@ -945,10 +932,13 @@ footer a:hover {
     text-align: center;
   }
   .contact .visuals {
-    width: 100%;
-    max-width: 25rem;
+    width: 80%;
+    max-width: 20rem;
     margin: auto;
     margin-top: 3rem;
+  }
+  .contact .visuals .gradient-orb {
+    width: 90%;
   }
 }
 @media screen and (max-width: 450px) {
@@ -957,6 +947,9 @@ footer a:hover {
   }
   .contact .cta a {
     font-size: 1.5rem;
+  }
+  .contact .visuals .enveloppe {
+    min-width: 5rem;
   }
 }
 
