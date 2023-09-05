@@ -57,6 +57,13 @@
             right: -10%;
             width: 72%;
             animation: float 10s infinite ease-in-out;
+            opacity: 1;
+            transition: 1.2s;
+
+            &.hidden {
+                bottom: 0;
+                opacity: 0;
+            }
 
             img {
                 object-fit: contain;
@@ -69,8 +76,14 @@
             left: -5%;
             width: 40%;
             transition: 0.1s;
-            transform: translate(10%, -10%);
             animation: float 5s infinite ease-in-out;
+            opacity: 1;
+            transition: 1.2s;
+
+            &.hidden {
+                top: -10%;
+                opacity: 0;
+            }
 
             img {
                 object-fit: contain;
@@ -79,20 +92,6 @@
 
 
         }
-    }
-}
-
-@keyframes float {
-    0% {
-        transform: translatey(0px);
-    }
-
-    50% {
-        transform: translatey(-20px);
-    }
-
-    100% {
-        transform: translatey(0px);
     }
 }
 

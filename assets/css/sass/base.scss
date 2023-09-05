@@ -206,3 +206,42 @@ footer {
     }
 
 }
+
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+
+.to-slide-left {
+    transform: translateX(-5%);
+    opacity: 0;
+    transition: 1s;
+}
+
+.slide--left {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.to-slide-up {
+    transform: translateY(10%);
+    opacity: 0;
+    transition: 1s ease-out;
+}
+
+.slide--up {
+    transform: translateY(0);
+    opacity: 1;
+}
