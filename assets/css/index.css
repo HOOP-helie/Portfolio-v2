@@ -601,7 +601,7 @@ footer a:hover {
 }
 #my-background .category .block {
   display: flex;
-  max-width: 55rem;
+  max-width: 56rem;
   padding: 1.5rem;
   transition: 0.3s;
   border-radius: 10px;

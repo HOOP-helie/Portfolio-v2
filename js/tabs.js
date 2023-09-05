@@ -1,21 +1,29 @@
-addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
+    const titles = document.querySelectorAll('.tabs-titles h3');
+    const categories = document.querySelectorAll('#my-background .category');
 
-    let titles = document.querySelectorAll('.tabs-titles h3');
-    let categories = document.querySelectorAll('#my-background .category');
-
-    for (let index = 0; index < titles.length; index++) {
-
-        titles[index].addEventListener("click", (e) => {
+    titles.forEach((title, index) => {
+        title.addEventListener("click", () => {
             // Apply active class to clicked tab
-            titles.forEach(title => title.classList.remove("active"))
-            e.target.classList.add("active");
+            titles.forEach((t) => t.classList.remove("active"));
+            title.classList.add("active");
+
+            // Hide all categories
+            categories.forEach((category) => {
+                category.classList.add("removed", "hidden");
+            });
+
             // Show corresponding category
-            categories.forEach(category => category.classList.add("removed", "hidden"))
             categories[index].classList.remove("removed");
-            setTimeout(function () {
+            setTimeout(() => {
                 categories[index].classList.remove("hidden");
             }, 20);
-        })
-
-    }
+        });
+    });
 });
+
+
+
+
+
+
