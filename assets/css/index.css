@@ -331,6 +331,39 @@ footer a:hover {
     font-size: 0.875rem;
   }
 }
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+.to-slide-left {
+  transform: translateX(-5%);
+  opacity: 0;
+  transition: 1s;
+}
+
+.slide--left {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.to-slide-up {
+  transform: translateY(10%);
+  opacity: 0;
+  transition: 1s ease-out;
+}
+
+.slide--up {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 #cursor,
 .cursor-circle {
   display: none;
@@ -372,7 +405,7 @@ footer a:hover {
   top: 0;
   background-color: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(10px);
-  padding: 2rem 4rem;
+  padding: 1.5rem 4rem;
   width: 100%;
   z-index: 5;
   transition: 0.2s;
@@ -384,18 +417,23 @@ footer a:hover {
   gap: 4rem;
   align-items: center;
 }
-.nav-desktop ul li span {
+
+.nav-desktop li span,
+.nav-mobile li span {
   color: var(--primary);
   display: inline-block;
   margin-right: 6px;
 }
-.nav-desktop ul li a {
+.nav-desktop li a,
+.nav-mobile li a {
   transition: 0.3s;
 }
-.nav-desktop ul li:hover a {
+.nav-desktop li:hover a,
+.nav-mobile li:hover a {
   color: var(--primary);
 }
-.nav-desktop ul li.resume a {
+.nav-desktop li.resume a,
+.nav-mobile li.resume a {
   display: inline-block;
   font-weight: 700;
   border-radius: 5px;
@@ -404,12 +442,115 @@ footer a:hover {
   padding: 0.5rem 2rem;
   transform: translateY(0);
 }
-.nav-desktop ul li.resume a:hover {
+.nav-desktop li.resume a:hover,
+.nav-mobile li.resume a:hover {
   transform: translateY(-5px);
 }
 
 @media screen and (max-width: 768px) {
   .nav-desktop {
+    display: none;
+  }
+}
+.header-mb {
+  position: fixed;
+  z-index: 1000;
+  background-color: var(--background);
+  width: 100%;
+  display: flex;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  top: 0;
+  justify-content: end;
+}
+.header-mb .menu-toggle-btn {
+  font-size: 0.9rem;
+  z-index: 1000;
+}
+.header-mb .menu-toggle-btn span {
+  color: var(--text-light);
+}
+.header-mb .menu-toggle-btn .burger-icon {
+  width: 1.25rem;
+  height: 0.6rem;
+  display: inline-block;
+  position: relative;
+  margin-right: 0.6rem;
+}
+.header-mb .menu-toggle-btn .burger-icon::after, .header-mb .menu-toggle-btn .burger-icon::before {
+  content: "";
+  background-color: var(--text-light);
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  transition: 0.2s;
+}
+.header-mb .menu-toggle-btn .burger-icon::after {
+  top: 0;
+}
+.header-mb .menu-toggle-btn .burger-icon::before {
+  bottom: 0;
+}
+
+.menu {
+  display: flex;
+  position: fixed;
+  background-color: var(--background);
+  width: 100%;
+  min-height: 100vh;
+  max-width: 18rem;
+  transform: translateX(100%);
+  transition: 0.4s ease-in-out;
+  padding-top: 20vh;
+  justify-content: center;
+  z-index: 5;
+  top: 0;
+  right: 0;
+}
+.menu ul {
+  margin: 2rem auto;
+}
+.menu .menu-link {
+  width: 100%;
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin-bottom: 4rem;
+  transform: translateY(100%);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.menu .menu-link span {
+  font-size: 1rem;
+}
+.menu .menu-link a {
+  font-size: 1rem;
+}
+.menu .menu-link--slide-up {
+  transform: translateY(0);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.menu--slide-right {
+  transform: translateX(0);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(12, 27, 41, 0.27);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+  display: block;
+}
+.overlay.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-mobile,
+  .header-mb {
     display: none;
   }
 }
@@ -463,6 +604,13 @@ footer a:hover {
   bottom: -15%;
   right: -10%;
   width: 72%;
+  animation: float 10s infinite ease-in-out;
+  opacity: 1;
+  transition: 1.2s;
+}
+.hero-section .visuals .laptop.hidden {
+  bottom: 0;
+  opacity: 0;
 }
 .hero-section .visuals .laptop img {
   object-fit: contain;
@@ -472,6 +620,14 @@ footer a:hover {
   top: 2%;
   left: -5%;
   width: 40%;
+  transition: 0.1s;
+  animation: float 5s infinite ease-in-out;
+  opacity: 1;
+  transition: 1.2s;
+}
+.hero-section .visuals .phone.hidden {
+  top: -10%;
+  opacity: 0;
 }
 .hero-section .visuals .phone img {
   object-fit: contain;
@@ -500,7 +656,7 @@ footer a:hover {
     margin: auto;
   }
   .hero-section .visuals {
-    max-width: 22rem;
+    max-width: 20rem;
     padding-left: 0;
     height: auto;
     width: 70%;
@@ -956,6 +1112,7 @@ footer a:hover {
   bottom: 0;
   max-width: 7rem;
   width: 30%;
+  animation: float 4s infinite ease-in-out;
 }
 .contact .visuals .enveloppe {
   right: -4%;
@@ -963,6 +1120,7 @@ footer a:hover {
   width: 50%;
   min-width: 10rem;
   max-width: 12rem;
+  animation: float 6s infinite ease-in-out;
 }
 .contact .visuals .gradient-orb {
   width: 100%;

@@ -1,0 +1,120 @@
+.header-mb {
+    position: fixed;
+    z-index: 1000;
+    background-color: var(--background);
+    width: 100%;
+    display: flex;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    top: 0;
+    justify-content: end;
+
+    .menu-toggle-btn {
+        font-size: 0.9rem;
+        z-index: 1000;
+
+        span {
+            color: var(--text-light);
+        }
+
+        .burger-icon {
+            width: 1.25rem;
+            height: 0.6rem;
+            display: inline-block;
+            position: relative;
+            margin-right: 0.6rem;
+
+            &::after,
+            &::before {
+                content: "";
+                background-color: var(--text-light);
+                width: 100%;
+                height: 3px;
+                position: absolute;
+                transition: 0.2s
+            }
+
+            &::after {
+                top: 0;
+            }
+
+            &::before {
+                bottom: 0;
+            }
+        }
+    }
+}
+
+//****************Menu Links***********************
+.menu {
+    display: flex;
+    position: fixed;
+    background-color: var(--background);
+    width: 100%;
+    min-height: 100vh;
+    max-width: 18rem;
+    transform: translateX(100%);
+    transition: 0.4s ease-in-out;
+    padding-top: 20vh;
+    justify-content: center;
+    z-index: 5;
+    top: 0;
+    right: 0;
+
+    ul {
+        margin: 2rem auto;
+    }
+
+
+    .menu-link {
+        width: 100%;
+        transition: all 0.5s;
+        transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        margin-bottom: 4rem;
+        transform: translateY(100%);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+        span {
+            font-size: 1rem;
+        }
+
+        a {
+            font-size: 1rem;
+        }
+    }
+
+    .menu-link--slide-up {
+        transform: translateY(0);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+}
+
+.menu--slide-right {
+    transform: translateX(0);
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(12 27 41 / 27%);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+    display: block;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .nav-mobile,
+    .header-mb {
+        display: none;
+    }
+}

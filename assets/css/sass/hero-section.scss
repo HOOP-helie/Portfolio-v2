@@ -56,6 +56,14 @@
             bottom: -15%;
             right: -10%;
             width: 72%;
+            animation: float 10s infinite ease-in-out;
+            opacity: 1;
+            transition: 1.2s;
+
+            &.hidden {
+                bottom: 0;
+                opacity: 0;
+            }
 
             img {
                 object-fit: contain;
@@ -67,15 +75,25 @@
             top: 2%;
             left: -5%;
             width: 40%;
+            transition: 0.1s;
+            animation: float 5s infinite ease-in-out;
+            opacity: 1;
+            transition: 1.2s;
+
+            &.hidden {
+                top: -10%;
+                opacity: 0;
+            }
 
             img {
                 object-fit: contain;
                 width: 100%;
             }
+
+
         }
     }
 }
-
 
 
 @media screen and (max-width: 900px) {
@@ -105,7 +123,7 @@
         }
 
         .visuals {
-            max-width: 22rem;
+            max-width: 20rem;
             padding-left: 0;
             height: auto;
             width: 70%;
@@ -157,11 +175,8 @@
             }
 
             .phone {
-
                 left: -15%;
                 width: 55%;
-
-
             }
         }
 

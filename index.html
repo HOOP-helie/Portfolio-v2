@@ -40,6 +40,23 @@
 
         </ul>
     </nav>
+    <div class="overlay hidden"></div>
+    <div class="header-mb">
+        <div class="menu-toggle-btn">
+            <p><span class="burger-icon"></span><span class="menu-toggle-btn--text">Menu</span></p>
+        </div>
+    </div>
+    <div class="nav-mobile menu">
+        <ul class="menu-list">
+            <li class="menu-link "><a href="#about"><span>01.</span>À propos</a></li>
+            <li class="menu-link "><a href="#my-background"><span>02.</span>Parcours</a></li>
+            <li class="menu-link "><a href="#projects"><span>03.</span>Projets</a></li>
+            <li class="menu-link resume"><a href="./assets//files/CV-2023.pdf" target="_blank">Mon CV</a>
+            </li>
+        </ul>
+    </div>
+
+
     <main>
         <!-- HERO SECTION -->
         <header class="hero-section">
@@ -52,12 +69,12 @@
                     marquent. Je suis disponible pour toute opportunité, que ce soit en freelance ou en entreprise.</p>
             </div>
             <div class="visuals">
-                <div class="visuals-box">
-                    <div class="phone">
+                <div class="visuals-box ">
+                    <div class="phone hidden">
                         <img src="assets/img/handphone.png" alt="Main avec smartphone">
                     </div>
                     <div class="content content--canvas"></div>
-                    <div class="laptop">
+                    <div class="laptop hidden">
                         <img src="assets/img/laptop.png" alt="Ordinateur portable">
                     </div>
                 </div>
@@ -72,7 +89,7 @@
                 <p class="subheading">À propos</p>
                 <h2>Découvrez-en davantage à mon sujet</h2>
             </div>
-            <div class="about--content">
+            <div class="about--content to-slide-left">
                 <div></div>
                 <div>
                     <p>En 2020, ma curiosité m’a poussé à mettre les mains dans le code pour la première fois.
@@ -234,7 +251,7 @@
                 <h2>Un petit aperçu de ce que j’ai pu réaliser</h2>
             </div>
             <div class="projects-list">
-                <div class="project">
+                <div class="project to-slide-up">
                     <div class="header">
                         <img src="./assets/img/projects/project1-1.png"
                             alt="Capture écran 1 du site de maintenance Devolie">
@@ -262,7 +279,7 @@
                         </ul>
                     </div>
                 </div>
-                <a href="https://www.rvdiagimmo.com/" class="project project-with-link" target="_blank">
+                <a href="https://www.rvdiagimmo.com/" class="project project-with-link to-slide-up" target="_blank">
                     <div>
                         <div class="header">
                             <img src="./assets/img/projects/project2-1.png" alt="Capture écran 1 du site de RVDI">
@@ -290,7 +307,7 @@
                         </div>
                     </div>
                 </a>
-                <div class="project">
+                <div class="project to-slide-up">
                     <div class="header">
                         <img src="./assets/img/projects/project3-1.png" alt="Capture écran 1 du site Tamago">
                         <img src="./assets/img/projects/sprite-rabbit.png" alt="Capture écran 2 du site de Tamago">
@@ -318,7 +335,7 @@
                         </ul>
                     </div>
                 </div>
-                <a href="https://devolie.fr/" class="project project-with-link" target="_blank">
+                <a href="https://devolie.fr/" class="project project-with-link to-slide-up" target="_blank">
                     <div>
                         <div class="header">
                             <img src="./assets/img/projects/project2-1.png" alt="Capture écran 1 du site de Devolie">
@@ -378,6 +395,9 @@
     <script src="js/cursor.js"></script>
     <script src="js/tabs.js"></script>
     <script src="js/nav-desktop.js"></script>
+    <script src="js/nav-mobile.js"></script>
+    <script src="js/hero-section.js"></script>
+    <script src="js/on-scroll.js"></script>
 </body>
 
 </html>
