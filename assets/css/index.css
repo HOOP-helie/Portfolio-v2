@@ -375,18 +375,25 @@ footer a:hover {
   padding: 2rem 4rem;
   width: 100%;
   z-index: 5;
+  transition: 0.2s;
 }
 .nav-desktop ul {
   margin-left: auto;
   display: flex;
   justify-content: end;
-  gap: 3rem;
+  gap: 4rem;
   align-items: center;
 }
 .nav-desktop ul li span {
   color: var(--primary);
   display: inline-block;
   margin-right: 6px;
+}
+.nav-desktop ul li a {
+  transition: 0.3s;
+}
+.nav-desktop ul li:hover a {
+  color: var(--primary);
 }
 .nav-desktop ul li.resume a {
   display: inline-block;
@@ -395,7 +402,6 @@ footer a:hover {
   color: var(--primary);
   border: 1px solid var(--primary);
   padding: 0.5rem 2rem;
-  transition: 0.3s;
   transform: translateY(0);
 }
 .nav-desktop ul li.resume a:hover {

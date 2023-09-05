@@ -6,12 +6,13 @@
     padding: 2rem 4rem;
     width: 100%;
     z-index: 5;
+    transition: 0.2s;
 
     ul {
         margin-left: auto;
         display: flex;
         justify-content: end;
-        gap: 3rem;
+        gap: 4rem;
         align-items: center;
 
         li {
@@ -22,6 +23,14 @@
                 margin-right: 6px;
             }
 
+            a {
+                transition: 0.3s;
+            }
+
+            &:hover a {
+                color: var(--primary);
+            }
+
             &.resume a {
                 display: inline-block;
                 font-weight: 700;
@@ -29,14 +38,10 @@
                 color: var(--primary);
                 border: 1px solid var(--primary);
                 padding: 0.5rem 2rem;
-                transition: 0.3s;
                 transform: translateY(0);
 
-
                 &:hover {
-
                     transform: translateY(-5px);
-
                 }
             }
         }
