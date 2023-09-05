@@ -1,15 +1,16 @@
 :root {
-    --dark: rgb(36, 36, 36);
+    --background: rgba(15, 23, 42);
     --text-light: rgb(255, 255, 255);
     --secondary: rgb(160, 184, 207);
     --primary: #7290FE;
     scroll-behavior: smooth;
+    scroll-padding-top: 10vh;
 }
 
 body {
     font-family: "Inter", sans-serif;
     position: relative;
-    background-color: rgba(15, 23, 42);
+    background-color: var(--background);
     color: var(--text-light);
 }
 
@@ -44,16 +45,29 @@ p {
     color: var(--text-light)
 }
 
-.bg-orb {
+.orb-left,
+.orb-right {
+    position: relative
+}
+
+.orb-left:before,
+.orb-right:before {
+    content: '';
     position: absolute;
     width: 20vw;
-    min-width: 20rem;
-    max-width: 25rem;
+    min-width: 15rem;
+    max-width: 20rem;
     aspect-ratio: 1;
     z-index: -1;
     transform: translate(-50%, -50%);
-    background: rgba(52, 51, 141, 0.3);
-    filter: blur(130px);
+    background: rgba(52, 51, 141, 0.25);
+    filter: blur(120px);
+}
+
+.orb-right:before {
+    right: 0;
+    transform: translate(0);
+
 }
 
 .subheading {
@@ -140,6 +154,7 @@ footer {
     margin: auto;
     text-align: center;
     margin-bottom: 2rem;
+    width: 90%;
 
     a {
         color: var(--secondary);
@@ -160,11 +175,6 @@ footer {
     .container {
         margin-bottom: 8rem;
 
-    }
-
-    .bg-orb {
-        background: rgba(52, 51, 141, 0.5);
-        width: 50vw;
     }
 
     h2 {
@@ -189,5 +199,9 @@ footer {
         font-size: 1.75rem;
     }
 
+    footer {
+
+        font-size: 0.875rem;
+    }
 
 }

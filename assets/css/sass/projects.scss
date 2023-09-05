@@ -1,14 +1,9 @@
-.projects {
+#projects {
 
     .title-section {
         max-width: 30rem;
         position: relative;
         margin-bottom: 5rem;
-
-        .bg-orb {
-            left: -40%;
-            top: -25%;
-        }
     }
 
     .projects-list {
@@ -201,7 +196,7 @@
 
 @media screen and (max-width: 768px) {
 
-    .projects {
+    #projects {
         .title-section {
             margin-bottom: 2rem;
         }
@@ -256,7 +251,7 @@
 
 
 @media screen and (max-width: 450px) {
-    .projects {
+    #projects {
         .project {
 
             .content {

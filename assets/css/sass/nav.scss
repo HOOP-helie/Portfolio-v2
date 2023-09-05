@@ -1,0 +1,56 @@
+.nav-desktop {
+    position: fixed;
+    top: 0;
+    background-color: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 2rem 4rem;
+    width: 100%;
+    z-index: 5;
+    transition: 0.2s;
+
+    ul {
+        margin-left: auto;
+        display: flex;
+        justify-content: end;
+        gap: 4rem;
+        align-items: center;
+
+        li {
+
+            span {
+                color: var(--primary);
+                display: inline-block;
+                margin-right: 6px;
+            }
+
+            a {
+                transition: 0.3s;
+            }
+
+            &:hover a {
+                color: var(--primary);
+            }
+
+            &.resume a {
+                display: inline-block;
+                font-weight: 700;
+                border-radius: 5px;
+                color: var(--primary);
+                border: 1px solid var(--primary);
+                padding: 0.5rem 2rem;
+                transform: translateY(0);
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+    }
+}

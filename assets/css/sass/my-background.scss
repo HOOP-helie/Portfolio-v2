@@ -1,15 +1,9 @@
-.my-background {
+#my-background {
 
     position: relative;
 
     .title-section {
         max-width: 35rem;
-
-
-        .bg-orb {
-            right: 0;
-            transform: translate(20%, -20%);
-        }
     }
 
     .my-background--content {
@@ -19,25 +13,28 @@
             position: relative;
             border-bottom: 1px solid var(--secondary);
 
-            &:before {
-                position: absolute;
-                content: '';
-                width: 8rem;
-                height: 1px;
-                background-color: var(--primary);
-                bottom: -1px;
-            }
-
             .tabs-titles {
                 display: flex;
 
                 h3 {
+                    position: relative;
                     display: flex;
                     color: var(--secondary);
                     width: 12rem;
                     padding-bottom: 1rem;
                     transition: 0.3s;
                     cursor: pointer;
+                    transition: 0.2s;
+
+                    &:before {
+                        transition: 0.4s;
+                        position: absolute;
+                        content: '';
+                        width: 0;
+                        height: 3px;
+                        background-color: var(--primary);
+                        bottom: -1px;
+                    }
 
                     &:hover {
                         color: var(--txt-light);
@@ -45,15 +42,29 @@
 
                     &.active {
                         color: var(--txt-light);
+
+                        &:before {
+                            width: 70%;
+                        }
                     }
                 }
             }
         }
     }
 
-    .education,
-    .experience {
+    .category {
         margin-top: 2rem;
+        display: block;
+        opacity: 1;
+        transition: opacity 1s;
+
+        &.hidden {
+            opacity: 0;
+        }
+
+        &.removed {
+            display: none;
+        }
 
         &:hover {
             .block {
@@ -67,7 +78,7 @@
 
         .block {
             display: flex;
-            max-width: 55rem;
+            max-width: 56rem;
             padding: 1.5rem;
             transition: 0.3s;
             border-radius: 10px;
@@ -150,7 +161,7 @@
 
 @media screen and (max-width: 768px) {
 
-    .my-background {
+    #my-background {
         .title-section {
             max-width: 30rem;
         }

@@ -1,7 +1,7 @@
 .contact {
     display: flex;
     margin-top: 15rem;
-    max-width: 65rem;
+    max-width: 62rem;
 
     .cta {
         position: relative;
@@ -36,11 +36,7 @@
             }
         }
 
-        .bg-orb {
-            top: -50%;
-            left: -20%;
-            max-width: 20rem;
-        }
+       
     }
 
     .visuals {
@@ -58,14 +54,16 @@
         .lightbulb {
             left: 0;
             bottom: 0;
-            max-width: 8rem;
+            max-width: 7rem;
             width: 30%;
         }
 
         .enveloppe {
-
-            right: 0;
+            right: -4%;
             top: -10%;
+            width: 50%;
+            min-width: 10rem;
+            max-width: 12rem;
         }
 
         .gradient-orb {
@@ -88,10 +86,14 @@
         }
 
         .visuals {
-            width: 100%;
-            max-width: 25rem;
+            width: 80%;
+            max-width: 20rem;
             margin: auto;
             margin-top: 3rem;
+
+            .gradient-orb {
+                width: 90%;
+            }
         }
     }
 }
@@ -107,6 +109,13 @@
 
             a {
                 font-size: 1.5rem;
+            }
+        }
+
+
+        .visuals {
+            .enveloppe {
+                min-width: 5rem;
             }
         }
     }
