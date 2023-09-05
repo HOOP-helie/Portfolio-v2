@@ -144,17 +144,18 @@ a {
 }
 
 :root {
-  --dark: rgb(36, 36, 36);
+  --background: rgba(15, 23, 42);
   --text-light: rgb(255, 255, 255);
   --secondary: rgb(160, 184, 207);
   --primary: #7290FE;
   scroll-behavior: smooth;
+  scroll-padding-top: 10vh;
 }
 
 body {
   font-family: "Inter", sans-serif;
   position: relative;
-  background-color: rgb(15, 23, 42);
+  background-color: var(--background);
   color: var(--text-light);
 }
 
@@ -335,7 +336,7 @@ footer a:hover {
   display: none;
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 768px) {
   #cursor,
   .cursor-circle {
     display: block;
@@ -366,11 +367,51 @@ footer a:hover {
     filter: blur(35px);
   }
 }
+.nav-desktop {
+  position: fixed;
+  top: 0;
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 2rem 4rem;
+  width: 100%;
+  z-index: 5;
+}
+.nav-desktop ul {
+  margin-left: auto;
+  display: flex;
+  justify-content: end;
+  gap: 3rem;
+  align-items: center;
+}
+.nav-desktop ul li span {
+  color: var(--primary);
+  display: inline-block;
+  margin-right: 6px;
+}
+.nav-desktop ul li.resume a {
+  display: inline-block;
+  font-weight: 700;
+  border-radius: 5px;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.5rem 2rem;
+  transition: 0.3s;
+  transform: translateY(0);
+}
+.nav-desktop ul li.resume a:hover {
+  transform: translateY(-5px);
+}
+
+@media screen and (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+}
 .hero-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: calc(100vh + 98px);
   margin: auto;
   max-width: 90rem;
   width: 90%;
@@ -434,8 +475,8 @@ footer a:hover {
 @media screen and (max-width: 900px) {
   .hero-section {
     flex-direction: column;
-    margin-top: 5rem;
-    height: auto;
+    margin-top: 15%;
+    min-height: auto;
   }
   .hero-section .introduction {
     text-align: center;
@@ -443,7 +484,7 @@ footer a:hover {
   }
   .hero-section .introduction h1 {
     font-size: 2rem;
-    font-size: clamp(2rem, 7vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3rem);
   }
   .hero-section .introduction h1 .small-h1 {
     font-size: 1.5rem;

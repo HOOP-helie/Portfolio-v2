@@ -1,0 +1,51 @@
+.nav-desktop {
+    position: fixed;
+    top: 0;
+    background-color: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 2rem 4rem;
+    width: 100%;
+    z-index: 5;
+
+    ul {
+        margin-left: auto;
+        display: flex;
+        justify-content: end;
+        gap: 3rem;
+        align-items: center;
+
+        li {
+
+            span {
+                color: var(--primary);
+                display: inline-block;
+                margin-right: 6px;
+            }
+
+            &.resume a {
+                display: inline-block;
+                font-weight: 700;
+                border-radius: 5px;
+                color: var(--primary);
+                border: 1px solid var(--primary);
+                padding: 0.5rem 2rem;
+                transition: 0.3s;
+                transform: translateY(0);
+
+
+                &:hover {
+
+                    transform: translateY(-5px);
+
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+    }
+}
