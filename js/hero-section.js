@@ -5,8 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', () => {
         const scrollValue = window.scrollY;
 
+        // Update the translation and opacity of elements
         phone.style.transform = `translateY(-${scrollValue * 0.2}px)`;
-        laptop.style.transform = `translateY(-${scrollValue * 0.4}px)`;
+        laptop.style.transform = `translateY(-${scrollValue * 0.3}px)`;
+
+        // Apply opacity changes based on scroll position
         if (scrollValue > 50) {
             phone.style.opacity = `${1 - scrollValue / 300}`;
             laptop.style.opacity = `${1 - scrollValue / 700}`;
@@ -20,14 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         phone.classList.remove("hidden")
 
-    }, 650);
+    }, 3800);
     setTimeout(() => {
         laptop.classList.remove("hidden")
-    }, 1000);
+    }, 3500);
 
     // Remove transition to not impact animation on scroll
     setTimeout(() => {
-        phone.style.transition = "none"
-        laptop.style.transition = "none"
-    }, 2500);
+        phone.style.transition = "initial"
+        laptop.style.transition = "initial"
+    }, 5500);
 })

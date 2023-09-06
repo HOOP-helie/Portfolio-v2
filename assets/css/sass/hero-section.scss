@@ -50,15 +50,15 @@
         .laptop,
         .phone {
             position: absolute;
+            transform: translateY(0);
         }
 
         .laptop {
             bottom: -15%;
             right: -10%;
             width: 72%;
-            animation: float 10s infinite ease-in-out;
             opacity: 1;
-            transition: 1.2s;
+            transition: 1s;
 
             &.hidden {
                 bottom: 0;
@@ -68,6 +68,7 @@
             img {
                 object-fit: contain;
                 width: 100%;
+                animation: float 8s infinite ease-in-out;
             }
         }
 
@@ -76,9 +77,8 @@
             left: -5%;
             width: 40%;
             transition: 0.1s;
-            animation: float 5s infinite ease-in-out;
             opacity: 1;
-            transition: 1.2s;
+            transition: 1s;
 
             &.hidden {
                 top: -10%;
@@ -88,6 +88,8 @@
             img {
                 object-fit: contain;
                 width: 100%;
+                animation: float 5s infinite ease-in-out;
+
             }
 
 

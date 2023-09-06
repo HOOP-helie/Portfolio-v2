@@ -1,0 +1,87 @@
+/* ===================================== */
+/* ============= LOADING PAGE ================ */
+/* ===================================== */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5000;
+
+    .loader-section {
+        position: fixed;
+        top: 0;
+        width: 51%;
+        height: 100%;
+        background: var(--background);
+        z-index: 10;
+    }
+
+    .loader-section.section-left {
+        left: 0;
+    }
+
+    .loader-section.section-right {
+        right: 0;
+    }
+
+    p {
+        transition: 0.8s;
+        position: fixed;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+        font-size: 2.5rem;
+        color: var(--text--light);
+        z-index: 15;
+        font-weight: 600;
+        letter-spacing: 3px;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+        span {
+            color: var(--primary);
+            font-size: 3rem;
+        }
+
+
+        &.slide-up {
+            top: 50%;
+
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+    }
+}
+
+/* Loaded styles */
+.loaded #loader-wrapper .loader-section.section-left {
+    transform: translateX(-100%);
+    transition: all 1s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+    transform: translateX(100%);
+    transition: all 1s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+
+.loaded #loader-wrapper {
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: all 1s 1.3s ease-out;
+}
+
+@media screen and (max-width: 450px) {
+    #loader-wrapper {
+        p {
+            font-size: 1.2rem;
+
+            span {
+
+                font-size: 2rem;
+            }
+        }
+    }
+
+}
