@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         phone.classList.remove("hidden")
 
-    }, 3800);
+    }, 4000);
     setTimeout(() => {
         laptop.classList.remove("hidden")
-    }, 3500);
+    }, 3800);
 
     // Remove transition to not impact animation on scroll
     setTimeout(() => {
