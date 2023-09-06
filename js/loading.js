@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    document.body.style.overflow = "hidden"; // Disable scrolling
 
     const loaderText = document.querySelector("#loader-wrapper p")
     setTimeout(() => {
@@ -11,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 2000);
             setTimeout(() => {
                 document.querySelector("body").classList.add("loaded");
+                document.body.style.overflow = "auto"; // Re-enable scrolling
             }, 2400);
-
         }
     };
 })

@@ -1192,7 +1192,7 @@ footer a:hover {
   width: 60%;
   font-weight: 700;
 }
-.contact .cta P {
+.contact .cta h2 {
   font-size: 2.5rem;
   color: var(--text-light);
   margin-bottom: 1rem;
@@ -1266,7 +1266,7 @@ footer a:hover {
   }
 }
 @media screen and (max-width: 450px) {
-  .contact .cta p {
+  .contact .cta h2 {
     font-size: 2rem;
   }
   .contact .cta a {
