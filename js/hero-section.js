@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         phone.classList.remove("hidden")
 
-    }, 4000);
+    }, 4400);
     setTimeout(() => {
         laptop.classList.remove("hidden")
     }, 3800);
