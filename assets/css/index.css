@@ -774,6 +774,9 @@ footer a:hover {
   max-width: 25rem;
   position: relative;
 }
+#about .title-section img {
+  width: 1rem;
+}
 #about .about--content {
   display: flex;
 }
@@ -995,60 +998,87 @@ footer a:hover {
   margin-bottom: 0.5rem;
   font-size: 0.875rem;
 }
+#projects .project .content .description ul {
+  list-style: circle;
+  color: var(--secondary);
+  line-height: 2;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
 #projects .project .content .technologies {
   margin-top: 1.2rem;
 }
-#projects .project:first-child .header {
+#projects .project.maintenance .header {
   background-image: url("./../img/bg-1.png");
 }
-#projects .project:first-child .header img:first-child {
+#projects .project.maintenance .header img:first-child {
   right: 10%;
   width: 50%;
   bottom: -2rem;
   z-index: 1;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
-#projects .project:first-child .header img:nth-child(2) {
+#projects .project.maintenance .header img:nth-child(2) {
   width: 70%;
   left: 10%;
   bottom: -3rem;
 }
-#projects .project:first-child:hover img:first-child {
+#projects .project.maintenance:hover img:first-child {
   bottom: -1px !important;
 }
-#projects .project:first-child:hover img:nth-child(2) {
+#projects .project.maintenance:hover img:nth-child(2) {
   bottom: -2rem !important;
 }
-#projects .project:nth-child(2) .header {
+#projects .project.stadiumgo .header {
   background-image: url("./../img/bg-2.png");
 }
-#projects .project:nth-child(2) .header img:first-child {
+#projects .project.stadiumgo .header img:first-child {
+  width: 50%;
+  left: 5%;
+  bottom: -1rem;
+}
+#projects .project.stadiumgo .header img:nth-child(2) {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  width: 48%;
+  right: 5%;
+  bottom: -4rem;
+}
+#projects .project.stadiumgo:hover img:first-child {
+  bottom: 0;
+}
+#projects .project.stadiumgo:hover img:nth-child(2) {
+  bottom: -1.5rem;
+}
+#projects .project.rvdi .header {
+  background-image: url("./../img/bg-2.png");
+}
+#projects .project.rvdi .header img:first-child {
   width: 40%;
   left: 8%;
   bottom: -3rem;
 }
-#projects .project:nth-child(2) .header img:nth-child(2) {
+#projects .project.rvdi .header img:nth-child(2) {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   width: 48%;
   right: 8%;
   bottom: -1rem;
 }
-#projects .project:nth-child(2):hover img:first-child {
+#projects .project.rvdi:hover img:first-child {
   bottom: -1rem !important;
 }
-#projects .project:nth-child(2):hover img:nth-child(2) {
+#projects .project.rvdi:hover img:nth-child(2) {
   bottom: -1px !important;
 }
-#projects .project:nth-child(3) .header {
+#projects .project.tamago .header {
   background-image: url("./../img/bg-3.png");
 }
-#projects .project:nth-child(3) .header img:first-child {
+#projects .project.tamago .header img:first-child {
   height: 90%;
   left: 5%;
   z-index: 1;
   bottom: 0;
 }
-#projects .project:nth-child(3) .header img:nth-child(2) {
+#projects .project.tamago .header img:nth-child(2) {
   min-width: 8rem;
   width: 35%;
   border-radius: 10px;
@@ -1058,30 +1088,30 @@ footer a:hover {
   z-index: 5;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
-#projects .project:nth-child(3) .header img:nth-child(3) {
+#projects .project.tamago .header img:nth-child(3) {
   height: 100%;
   right: 8%;
 }
-#projects .project:nth-child(3):hover .header img:nth-child(2) {
+#projects .project.tamago:hover .header img:nth-child(2) {
   width: 38%;
 }
-#projects .project:nth-child(4) .header {
+#projects .project.devolie .header {
   background-image: url("./../img/bg-1.png");
 }
-#projects .project:nth-child(4) .header img:first-child {
+#projects .project.devolie .header img:first-child {
   width: 40%;
   left: 10%;
   bottom: -2rem;
 }
-#projects .project:nth-child(4) .header img:nth-child(2) {
+#projects .project.devolie .header img:nth-child(2) {
   width: 45%;
   right: 10%;
   bottom: -1rem;
 }
-#projects .project:nth-child(4):hover img:first-child {
+#projects .project.devolie:hover img:first-child {
   bottom: -1px !important;
 }
-#projects .project:nth-child(4):hover img:nth-child(2) {
+#projects .project.devolie:hover img:nth-child(2) {
   bottom: -1px !important;
 }
 #projects .project-with-link {
