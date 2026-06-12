@@ -1,513 +1,606 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:title"
+      content="Ophélie Hornn - Web developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Full stack developer, I help you bring your digital projects to life."
+    />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+    <title>Ophélie Hornn - Full stack developer</title>
+    <meta
+      name="description"
+      content="Full stack developer, I help you bring your digital projects to life."
+    />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Ophélie Hornn - Portfolio Développeuse Web">
-    <meta property="og:description"
-        content="Développeuse web Fullstack, je vous accompagne dans la réalisation de vos projets digitaux.">
-    <meta property="og:image" content="https://example.com/image.jpg">
-    <title>Ophélie Hornn - Développeuse Web Fullstack</title>
-    <meta name="description"
-        content="Développeuse web Fullstack, je vous accompagne dans la réalisation de vos projets digitaux.">
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/efc7f3c1f0.js"
+      crossorigin="anonymous"
+    ></script>
+    >
+    <link rel="stylesheet" href="assets/css/index.css" />
+  </head>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/efc7f3c1f0.js" crossorigin="anonymous"></script>>
-    <link rel="stylesheet" href="assets/css/index.css">
-</head>
-
-<body>
-    <div id="loader-wrapper">
+  <body>
+    <!-- <div id="loader-wrapper">
         <p>ophelie<span>.</span>hornn</p>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-    </div>
+    </div> -->
     <div id="cursor">
-        <div class="cursor-circle"></div>
+      <div class="cursor-circle"></div>
     </div>
     <div class="socials">
-        <a href="mailto:hornn.ophelie@gmail.com">
-            <i class="fa-regular fa-envelope"></i>
-        </a>
-        <a href="https://github.com/HOOP-helie" target="_blank">
-            <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/oph%C3%A9lie-hornn/" target="_blank">
-            <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-        <a href="https://gitlab.com/HOOPhelie" target="_blank">
-            <i class="fa-brands fa-gitlab"></i>
-        </a>
-        <span></span>
+      <a href="mailto:hornn.ophelie@gmail.com">
+        <i class="fa-regular fa-envelope"></i>
+      </a>
+      <a href="https://github.com/HOOP-helie" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/oph%C3%A9lie-hornn/" target="_blank">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="https://gitlab.com/HOOPhelie" target="_blank">
+        <i class="fa-brands fa-gitlab"></i>
+      </a>
+      <span></span>
     </div>
     <nav class="nav-desktop">
-        <ul>
-            <li>
-                <a href="#about">
-                    <span>01.</span>À propos</a>
-            </li>
-            <li>
-                <a href="#my-background">
-                    <span>02.</span>Parcours</a>
-            </li>
-            <li>
-                <a href="#projects">
-                    <span>03.</span>Projets</a>
-            </li>
-            <li class="resume">
-                <a href="./assets//files/CV.pdf" target="_blank">Mon CV</a>
-            </li>
-
-        </ul>
+      <ul>
+        <li>
+          <a href="#about"> <span>01.</span>About</a>
+        </li>
+        <li>
+          <a href="#my-background"> <span>02.</span>Background</a>
+        </li>
+        <li>
+          <a href="#projects"> <span>03.</span>Projects</a>
+        </li>
+        <li class="resume">
+          <a href="./assets//files/CV.pdf" target="_blank">My resume</a>
+        </li>
+      </ul>
     </nav>
     <div class="overlay hidden"></div>
     <div class="header-mb">
-        <div class="menu-toggle-btn">
-            <p>
-                <span class="burger-icon"></span>
-                <span class="menu-toggle-btn--text">Menu</span>
-            </p>
-        </div>
+      <div class="menu-toggle-btn">
+        <p>
+          <span class="burger-icon"></span>
+          <span class="menu-toggle-btn--text">Menu</span>
+        </p>
+      </div>
     </div>
     <div class="nav-mobile menu">
-        <ul class="menu-list">
-            <li class="menu-link ">
-                <a href="#about">
-                    <span>01.</span>À propos</a>
-            </li>
-            <li class="menu-link ">
-                <a href="#my-background">
-                    <span>02.</span>Parcours</a>
-            </li>
-            <li class="menu-link ">
-                <a href="#projects">
-                    <span>03.</span>Projets</a>
-            </li>
-            <li class="menu-link resume">
-                <a href="./assets//files/CV-2023.pdf" target="_blank">Mon CV</a>
-            </li>
-        </ul>
+      <ul class="menu-list">
+        <li class="menu-link">
+          <a href="#about"> <span>01.</span>About</a>
+        </li>
+        <li class="menu-link">
+          <a href="#my-background"> <span>02.</span>Background</a>
+        </li>
+        <li class="menu-link">
+          <a href="#projects"> <span>03.</span>Projects</a>
+        </li>
+        <li class="menu-link resume">
+          <a href="./assets//files/CV.pdf" target="_blank">My resume</a>
+        </li>
+      </ul>
     </div>
 
-
     <main>
-        <!-- HERO SECTION -->
-        <header class="hero-section">
-            <div class="introduction">
-                <h1>
-                    <span class="small-h1">Hello !</span><br>Moi, c'est
-                    <span class="txt-primary">Ophélie Hornn.</span><br>Je donne vie à vos idées.
-                </h1>
-                <p>Je suis développeuse web Fullstack et j’aime concevoir des expériences utilisateurs qui marquent. Je
-                    suis disponible pour toute opportunité, que ce soit en freelance ou en entreprise pour vous apporter
-                    ma créativité et mon expertise technique.</p>
+      <!-- HERO SECTION -->
+      <header class="hero-section">
+        <div class="introduction">
+          <h1>
+            <span>Hello !</span><br />I'm
+            <span class="txt-primary big-h1">Ophélie Hornn.</span><br />I turn
+            ideas into clean, functional web products.
+          </h1>
+          <p>
+            I am a Full Stack developer who loves crafting user experiences that
+            stick. I'm open to both freelance and full-time opportunities,
+            bringing creativity and technical expertise to every project.
+          </p>
+        </div>
+        <div class="visuals">
+          <div class="visuals-box">
+            <div class="phone hidden">
+              <img src="assets/img/handphone.png" alt="Main avec smartphone" />
             </div>
-            <div class="visuals">
-                <div class="visuals-box ">
-                    <div class="phone hidden">
-                        <img src="assets/img/handphone.png" alt="Main avec smartphone">
-                    </div>
-                    <div class="content content--canvas"></div>
-                    <div class="laptop hidden">
-                        <img src="assets/img/laptop.png" alt="Ordinateur portable">
-                    </div>
+            <div class="content content--canvas"></div>
+            <div class="laptop hidden">
+              <img src="assets/img/laptop.png" alt="Ordinateur portable" />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="container">
+        <div class="title-section orb-left">
+          <p class="subheading">About me</p>
+          <h2>The person behind the code</h2>
+        </div>
+        <div class="about--content to-slide-left">
+          <div></div>
+          <div>
+            <p>
+              In 2020, curiosity pushed me to write my first lines of code.
+              <span class="txt-light">I never stopped since.</span>
+            </p>
+            <p>
+              I first started at a
+              <a class="txt-primary" href="https://devolie.fr/" target="_blank"
+                >digital communication agency,</a
+              >
+              where I worked across a wide range of projects : back-end and
+              front-end development, content writing and design.
+            </p>
+            <p>
+              I then joined a
+              <a
+                class="txt-primary"
+                href="https://stadiumgo.fr/"
+                target="_blank"
+                >fast-growing startup in the sports and cultural carpooling
+                space</a
+              >, where I got hand-on experience evolving a SaaS product and
+              managing key features.
+            </p>
+            <p>
+              My biggest strength is <span class="txt-light">versability</span>.
+              I love designing and building interface that are smooth,
+              functionnal and accessible, backed by solid, clean code.
+              Detailed-oriented by nature, I enjoy finding the right balance
+              between <span class="txt-light">aesthetic and engineering.</span>
+            </p>
+            <div class="recent-skills">
+              <p>Here are the technologies I've been working with lately:</p>
+              <ul>
+                <li>Next.js / React</li>
+                <li>Symfony (PHP)</li>
+                <li>Tailwind</li>
+                <li>Symfony UX</li>
+                <li>API Platform</li>
+                <li>WordPress</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MY BACKGROUND SECTION -->
+      <section id="my-background" class="container orb-right">
+        <div class="title-section">
+          <p class="subheading">My background</p>
+          <h2>How I got there</h2>
+        </div>
+        <div class="my-background--content">
+          <div class="tabs">
+            <div class="tabs-titles">
+              <h3 class="active">Experience</h3>
+              <h3>Education</h3>
+            </div>
+          </div>
+          <!-- EXPERIENCE -->
+          <div class="category experience">
+            <a href="https://stadiumgo.fr/" target="_blank">
+              <div class="block">
+                <div class="date">
+                  <p>2024 ~ 2025</p>
                 </div>
-            </div>
-
-        </header>
-
-
-        <!-- ABOUT SECTION -->
-        <section id="about" class="container">
-            <div class="title-section orb-left">
-                <p class="subheading">À propos</p>
-                <h2>Découvrez-en davantage à mon sujet</h2>
-            </div>
-            <div class="about--content to-slide-left">
-                <div></div>
-                <div>
-                    <p>En 2020, ma curiosité m’a poussé à mettre les mains dans le code pour la première fois. 
-                        <span class="txt-light">Depuis, j'en ai fait mon métier.</span>
-                    </p>
-                    <p>
-                        J'ai d'abord rejoint une
-                        <a class="txt-primary" href="https://devolie.fr/" target="_blank">agence de communication digitale</a> où j'ai pu collaborer sur une multitude de projets divers et variés, que ce
-                        soit du développement back, front, de la rédaction de contenu ou du design.
-                    </p>
-                    <p>
-                       Par la suite, j'ai intégré une <a class="txt-primary" href="https://stadiumgo.fr/" target="_blank">startup en pleine croissance dans le domaine du covoiturage sportif et culturel</a>, où j'ai pu aborder plusieurs thématiques liées à la gestion d'un produit SaaS. 
-                    </p>
-                    <p>
-                        Ma grande force réside dans ma <span class="txt-light">polyvalence</span>. J’aime concevoir et intégrer des interfaces à la
-                        fois fluides, fonctionnelles et accessibles avec un back-end robuste.
-                        Attentive aux détails, j’aime combiner <span class="txt-light">esthétisme et code de qualité.</span>
-                    </p>
-                    <div class="recent-skills">
-                        <p>
-                            Voici les technologies avec lesquelles j’ai travaillé dernièrement:
-                        </p>
-                        <ul>
-                            <li>Symfony</li>
-                            <li>Next / React</li>
-                            <li>Tailwind</li>
-                            <li>Symfony UX</li>
-                            <li>API Platform</li>
-                            <li>WordPress</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- MY BACKGROUND SECTION -->
-        <section id="my-background" class=" container orb-right">
-            <div class="title-section ">
-
-                <p class="subheading">Mon parcours</p>
-                <h2>Ou comment j'en suis arrivée là</h2>
-            </div>
-            <div class="my-background--content">
-                <div class="tabs">
-                    <div class="tabs-titles">
-                        <h3 class="active">Expérience</h3>
-                        <h3>Formation</h3>
-                    </div>
-                </div>
-                <!-- EXPERIENCE -->
-                <div class="category experience">
-                    <a href="https://stadiumgo.fr/" target="_blank">
-                        <div class="block">
-                            <div class="date">
-                                <p>2024 ~ 2025</p>
-                            </div>
-                            <div class="content">
-                                <div class="title"><img src="assets/img/stadiumgo.png" alt="Logo de StadiumGO">
-                                    <h4>StadiumGO</h4>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </div>
-                                <p class="subtitle">Développeuse Fullstack</p>
-                                <p>
-                                    À l’aise sur plusieurs aspects de la stack, j’ai contribué au développement et à la maintenance d’un produit SaaS de covoiturage à destination d'évènements sportifs et culturels.
-                                 </p>
-                                <p> Côté front, j’ai travaillé sur l’interface utilisateur avec l'intégration de nouvelles fonctionnalités et participé à la refonte UI.
-                                </p>
-                                <p>Côté Back, j’ai conçu et amélioré des endpoints, implémenté des règles métiers et structuré un dashboard B2B : gestion des rôles, calculs et affichage de statistiques et ergonomie adaptée aux besoins partenaires.
-                                </p>
-                                <p>
-                                    Cette expérience m’a permis d'explorer des problématiques concrètes de gestion produit, d’expérience utilisateur et d’optimisation technique.
-                                </p>
-                                <ul class="technologies">
-                                    <li>React</li>
-                                    <li>Next.js</li>
-                                    <li>Symfony</li>
-                                    <li>Symfony UX</li>
-                                    <li>API Platform</li>
-                                    <li>Tailwind</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://devolie.fr/" target="_blank">
-                        <div class="block">
-                            <div class="date">
-                                <p>2021 ~ 2023</p>
-                            </div>
-                            <div class="content">
-                                <div class="title"><img src="assets/img/devolie.png" alt="Logo de l'agence Devolie">
-                                    <h4>Devolie</h4>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </div>
-                                <p class="subtitle">Développeuse Fullstack - Stage suivi d’une alternance</p>
-                                <p>
-                                    Capable d'intervenir à la fois sur le back-end et le front-end, j'ai développé des
-                                    sites en utilisant des frameworks tels que React et Symfony (plus de détails dans la
-                                    partie projets). Je peux également participer à différentes
-                                    étapes d'un projet, de la phase de conception à la phase de mise en production. </p>
-
-                                <p> J'ai contribué à plusieurs projets WordPress, que ce soit en
-                                    travaillant en équipe (Solina, Surf Training,...) ou de manière autonome (Devolie).
-                                    Mon expérience avec WordPress englobe l'utilisation de divers outils, tels que
-                                    l'utilisation de thèmes pré-existants, d'extensions mais également du développement
-                                    de solutions sur-mesure avec du Theme Building. </p>
-
-                                <p>
-                                    Il m’est arrivé d’intervenir dans des centres de formation, de
-                                    former des clients sur nos outils et d’assurer des maintenances.
-                                </p>
-                                <ul class="technologies">
-                                    <li>React</li>
-                                    <li>Symfony</li>
-                                    <li>WordPress</li>
-                                    <li>Design</li>
-                                    <li>Figma</li>
-                                    <li>Rédaction de contenu</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- EDUCATION -->
-                <div class="category education  hidden removed">
-                    <a href="https://oclock.io/formations/alternance/" target="_blank">
-                        <div class="block">
-                            <div class="date">
-                                <p>16 mois - 2021 ~ 2023</p>
-                            </div>
-                            <div class="content">
-                                <div class="title"><img src="assets/img/oclock.png" alt="Logo de l'école O'clock">
-                                    <h4>O’clock</h4>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </div>
-                                <p class="subtitle">Titre Concepteur Développeur d’Application - En alternance</p>
-                                <p>Afin de devenir une développeuse plus aguérrie, j'ai ajouté à mon arc des
-                                    compétences en
-                                    conception pour mieux comprendre et prendre en charge un projet dans sa globalité :
-                                    comment choisir la meilleure architecture, les outils et langages les plus adaptés,
-                                    mettre en place un CI/CD, et plus encore, sans négliger la sécurité.
-                                </p>
-                                <ul class="technologies">
-                                    <li>React</li>
-                                    <li>Symfony</li>
-                                    <li>Laravel</li>
-                                    <li>Docker</li>
-                                    <li>Conception</li>
-                                    <li>Tests</li>
-                                    <li>Architecture</li>
-                                    <li>Desktop/mobile</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://www.campusdulac.com/" target="_blank">
-                        <div class="block">
-                            <div class="date">
-                                <p>7 mois - 2021</p>
-                            </div>
-                            <div class="content">
-                                <div class="title"><img src="assets/img/campus-du-lac.png" alt="Logo du Campus du Lac">
-                                    <h4>Campus du Lac CCI Gironde</h4>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </div>
-                                <p class="subtitle">Titre Développeur Web et Web Mobile</p>
-                                <p>C’est ici que j’ai acquis des bases solides pour débuter ma carrière de développeuse
-                                    :
-                                    Côté Design, j’ai appris à maquetter une application, créer des wireframes, une
-                                    charte
-                                    graphique.
-                                </p>
-                                <p>Côté développement, je suis capable d’Intégrer une maquette, en prenant en compte le
-                                    responsive, le SEO et l’accessibilité. De plus, je suis en mesure de concevoir une
-                                    base
-                                    de données et de communiquer avec celle-ci.</p>
-                                <ul class="technologies">
-                                    <li>HTML</li>
-                                    <li>CSS/SCSS</li>
-                                    <li>JS</li>
-                                    <li>PHP</li>
-                                    <li>SQL</li>
-                                    <li>Photoshop</li>
-                                    <li>Illustrator</li>
-                                    <li>Adobe XD</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- MY PROJECTS SECTION -->
-        <section id="projects" class="container">
-            <div class="title-section orb-left">
-                <p class="subheading">Mes projets</p>
-                <h2>Un petit aperçu de ce que j’ai pu réaliser</h2>
-            </div>
-            <div class="projects-list">
-                <a href="https://www.stadiumgo.fr/" class="project stadiumgo project-with-link to-slide-up" target="_blank">
-                    <div>
-                        <div class="header">
-                            <img src="./assets/img/projects/project-stadiumgo-hompage.PNG" alt="Capture écran 1 du site de RVDI">
-                            <img src="./assets/img/projects/project-stadiumgo-map.PNG" alt="Capture écran 2 du site de RVDI">
-                        </div>
-                        <div class="content">
-                            <div class="title">
-                                <p>StadiumGO</p>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="description">
-                                <p>StadiumGO propose une plateforme multi-tenants dédiée aux événements sportifs et culturels. Sa mission ? Réduire l’empreinte carbone des déplacements de spectateurs en améliorant leur expérience.</p>
-                                <p>
-                                    🚀 J’ai rejoint la startup en pleine croissance pour contribuer à la mise en œuvre de projets à fort impact, tels que : </p>
-                                    <ul>
-                                        <li>Un système de récompense automatisé</li>
-                                        <li>Des outils de visualisation de données : calculs de statistiques, graphiques dynamiques, et exports en formats Excel et PDF</li>
-                                        <li>Une carte interactive pour encourager le covoiturage et en faciliter la réservation</li>
-                                    </ul>  
-                               <p>Des projets concrets, variés et à forte valeur ajoutée, mêlant innovation, engagement écologique et attention portée à l'expérience utilisateur.</p>
-                            </div>
-                            <ul class="technologies">
-                                <li>React</li>
-                                    <li>Next.js</li>
-                                    <li>Symfony</li>
-                                    <li>Symfony UX</li>
-                                    <li>API Platform</li>
-                                    <li>Tailwind</li>
-                                    <li>Google Maps Platform</li>
-                            </ul>
-                        </div>
-                    </div>
-                </a>
-                <div class="project maintenance to-slide-up">
-                    <div class="header">
-                        <img src="./assets/img/projects/project1-1.png"
-                            alt="Capture écran 1 du site de maintenance Devolie">
-                        <img src="./assets/img/projects/project1-2.png"
-                            alt="Capture écran 2 du site de maintenance Devolie">
-                    </div>
-                    <div class="content">
-                        <div class="title">
-                            <p>Maintenance Devolie</p>
-                        </div>
-                        <div class="description">
-                            <p>Pour répondre aux besoins de l’équipe, j’ai développé une application qui permet de gérer
-                                les
-                                tickets, les maintenances et les factures clients.</p>
-                            <p>
-                                Système de notification par mail, dépôt de fichiers, attribution des tickets à des
-                                collaborateurs... cette plateforme entièrement réalisée à l’image de Devolie a permis
-                                d’optimiser le workflow de l’agence.</p>
-                        </div>
-                        <ul class="technologies">
-                            <li>React</li>
-                            <li>Symfony</li>
-                            <li>Docker</li>
-                            <li>CI/CD</li>
-                            <li>VPS</li>
-                        </ul>
-                    </div>
-                </div>
-                <a href="https://www.rvdiagimmo.com/" class="project rvdi project-with-link to-slide-up" target="_blank">
-                    <div>
-                        <div class="header">
-                            <img src="./assets/img/projects/project2-1.png" alt="Capture écran 1 du site de RVDI">
-                            <img src="./assets/img/projects/project2-2.png" alt="Capture écran 2 du site de RVDI">
-                        </div>
-                        <div class="content">
-                            <div class="title">
-                                <p>RVDI</p>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="description">
-                                <p>RVDI ou les Rendez-Vous du Diag’immo est un forum annuel consacré au Diagnostic
-                                    immobilier. Un tableau de bord a été implémenté afin que le client puisse modifier
-                                    certains contenus du site et gérer les réservations de stands.</p>
-                                <p>
-                                    Les demandes de réservation se font via un formulaire avec un affichage dynamique du
-                                    tarif selon la formule choisie pour une meilleure expérience utilisateur. Pour des
-                                    raisons de sécurité, le calcul des tarifs est réalisé côté serveur, afin de prévenir
-                                    toute manipulation côté front.</p>
-                            </div>
-                            <ul class="technologies">
-                                <li>Symfony</li>
-                                <li>EasyAdmin</li>
-                                <li>SCSS</li>
-                                <li>JS</li>
-                            </ul>
-                        </div>
-                    </div>
-                </a>
-                <div class="project tamago to-slide-up">
-                    <div class="header">
-                        <img src="./assets/img/projects/project3-1.png" alt="Capture écran 1 du site Tamago">
-                        <img src="./assets/img/projects/gif-tamago.gif" alt="Capture écran de l'écran d'un tamago">
-                        <img src="./assets/img/projects/sprite-rabbit.png" alt="Capture écran 2 du site de Tamago">
-                    </div>
-                    <div class="content">
-                        <div class="title">
-                            <p>Tamago</p>
-                        </div>
-                        <div class="description">
-                            <p>Tamago est un jeu en ligne largement inspiré du célèbre Tamagotchi. Il a été créé dans le
-                                cadre d'un projet de fin d'année au sein d’O’clock.</p>
-                            <p>En tant qu'équipe composée de 5 développeurs, nous avons réalisés ce projet de A à Z :
-                                depuis l'élaboration initiale du cahier des charges et la phase de conception, jusqu'au
-                                développement et à la mise en production.</p>
-                            <p>Le jeu est accesible via navigateur. Les statistiques du Tamago évoluent en temps réel et
-                                sont gérés avec Crontab. J’ai personnellement conçu les sprite sheets avec Piskel.</p>
-                        </div>
-                        <ul class="technologies">
-                            <li>React</li>
-                            <li>Typescript</li>
-                            <li>Symfony</li>
-                            <li>Docker</li>
-                            <li>CD</li>
-                            <li>Pixel Art</li>
-                        </ul>
-                    </div>
-                </div>
-                <a href="https://www.old.devolie.fr/" class="project devolie project-with-link to-slide-up" target="_blank">
-                    <div>
-                        <div class="header">
-                            <img src="./assets/img/projects/project4-2.png" alt="Capture écran 2 du site de Devolie">
-                            <img src="./assets/img/projects/project4-1.png" alt="Capture écran 1 du site de Devolie">
-                        </div>
-                        <div class="content">
-                            <div class="title title">
-                                <p>Devolie</p>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="description">
-                                <p>En plus du site de gestion de maintenance et factures de Devolie, j'ai également
-                                    réalisé son site vitrine. S'agissant avant tout d'une agence spécialisée WordPress,
-                                    c'est tout naturellement que ce CMS a été choisi pour le concevoir.
-                                </p>
-                                <p>
-                                    Une approche
-                                    avec du Theme Building a été utilisée pour garantir une meilleure maintenance et
-                                    modularité dans le temps. J'ai également pris en charge la rédaction du contenu et
-                                    choisi les éléments visuels.
-                                </p>
-                            </div>
-                            <ul class="technologies">
-                                <li>WordPress</li>
-                                <li>ACF</li>
-                                <li>Theme Building</li>
-                                <li>Design</li>
-                                <li>Rédaction de contenu</li>
-                            </ul>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-
-        <section class="contact container">
-            <div class="cta orb-left">
-                <h2>Vous avez un projet ?</h2>
-                <a href="mailto:hornn.ophelie@gmail.com">Parlons-en !
+                <div class="content">
+                  <div class="title">
+                    <img
+                      src="assets/img/stadiumgo.png"
+                      alt="Logo de StadiumGO"
+                    />
+                    <h4>StadiumGO</h4>
                     <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
+                  </div>
+                  <p class="subtitle">Full stack developer</p>
+                  <p>
+                    Built and maintained a SaaS carpooling platform for sports
+                    and cultural events.
+                    <br />
+                    Hired as a back-end developer, I quickly moved into a
+                    full-stack role.
+                  </p>
+                  <p>
+                    Joining mid-way through a front-end redesign, I worked from
+                    Figma mockups while contributing to design decisions.
+                    <br />Over time I took on more ownership, working on
+                    features that drove user engagement and gave the product a
+                    real edge with B2B partners.
+                  </p>
+                  <ul class="technologies">
+                    <li>React</li>
+                    <li>Next.js</li>
+                    <li>Symfony</li>
+                    <li>Symfony UX</li>
+                    <li>API Platform</li>
+                    <li>Tailwind</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <a href="https://devolie.fr/" target="_blank">
+              <div class="block">
+                <div class="date">
+                  <p>2021 ~ 2023</p>
+                </div>
+                <div class="content">
+                  <div class="title">
+                    <img
+                      src="assets/img/devolie.png"
+                      alt="Logo de l'agence Devolie"
+                    />
+                    <h4>Devolie</h4>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                  <p class="subtitle">
+                    Full stack developer - Internship then Apprenticeship
+                  </p>
+                  <p>
+                    Working across both back-end and front-end, I built and
+                    maintained websites using React, Symfony, and WordPress. I
+                    worked on several WordPress projects, both in a team and
+                    independently, using pre-existing themes, plugins, and
+                    custom Theme Building solutions.
+                  </p>
+                  <ul class="technologies">
+                    <li>React</li>
+                    <li>Symfony</li>
+                    <li>WordPress</li>
+                    <li>Design</li>
+                    <li>Figma</li>
+                    <li>Content Writing</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- EDUCATION -->
+          <div class="category education hidden removed">
+            <a href="https://oclock.io/formations/alternance/" target="_blank">
+              <div class="block">
+                <div class="date">
+                  <p>16 months - 2021 ~ 2023</p>
+                </div>
+                <div class="content">
+                  <div class="title">
+                    <img
+                      src="assets/img/oclock.png"
+                      alt="Logo de l'école O'clock"
+                    />
+                    <h4>O’clock</h4>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                  <p class="subtitle">
+                    Application Developer & Designer - Apprenticeship (Bac+3/4)
+                  </p>
+                  <p>
+                    To become a more well-rounded developer, I expanded my skill
+                    set to include software architecture and project conception
+                    : learning how to choose the right architecture, tools and
+                    languages, set up CI/CD pipelines, and more, all while
+                    keeping security in mind.
+                  </p>
+                  <ul class="technologies">
+                    <li>React</li>
+                    <li>Symfony</li>
+                    <li>Laravel</li>
+                    <li>Docker</li>
+                    <li>Conception</li>
+                    <li>Tests</li>
+                    <li>Architecture</li>
+                    <li>Desktop/mobile</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <a href="https://www.campusdulac.com/" target="_blank">
+              <div class="block">
+                <div class="date">
+                  <p>7 months - 2021</p>
+                </div>
+                <div class="content">
+                  <div class="title">
+                    <img
+                      src="assets/img/campus-du-lac.png"
+                      alt="Logo du Campus du Lac"
+                    />
+                    <h4>Campus du Lac CCI Gironde</h4>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                  <p class="subtitle">Web & Mobile Developer</p>
+                  <p>
+                    This is where I built the foundations of my dev career :
+                    wireframing, visual identity design, responsive integration,
+                    SEO, accessibility, and database design.
+                  </p>
+                  <ul class="technologies">
+                    <li>HTML</li>
+                    <li>CSS/SCSS</li>
+                    <li>JS</li>
+                    <li>PHP</li>
+                    <li>SQL</li>
+                    <li>Photoshop</li>
+                    <li>Illustrator</li>
+                    <li>Adobe XD</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
 
-            <div class="visuals ">
-                <img class="gradient-orb" src="assets/img/gradient-orb.png" alt="Orbe avec un fond gradient">
-                <img class="lightbulb" src="assets/img/lightbulb.png" alt="Ampoule 3d">
-                <img class="enveloppe" src="assets/img/enveloppe.png" alt="Enveloppe 3d">
-
+      <!-- MY PROJECTS SECTION -->
+      <section id="projects" class="container">
+        <div class="title-section orb-left">
+          <p class="subheading">My projects</p>
+          <h2>A glimpse of what I've built</h2>
+        </div>
+        <div class="projects-list">
+          <a
+            href="https://www.stadiumgo.fr/"
+            class="project stadiumgo project-with-link to-slide-up"
+            target="_blank"
+          >
+            <div>
+              <div class="header">
+                <img
+                  src="./assets/img/projects/project-stadiumgo-hompage.PNG"
+                  alt="Capture écran 1 du site de RVDI"
+                />
+                <img
+                  src="./assets/img/projects/project-stadiumgo-map.PNG"
+                  alt="Capture écran 2 du site de RVDI"
+                />
+              </div>
+              <div class="content">
+                <div class="title">
+                  <p>StadiumGO</p>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="description">
+                  <p>
+                    StadiumGO is a SaaS platform dedicated to sports and
+                    cultural events. Its mission? Help organisers reduce their
+                    carbon footprint through smarter carpooling.
+                  </p>
+                  <p>
+                    🚀 I joined the startup during its rapid growth phase to
+                    work on high-impact projects, such as :
+                  </p>
+                  <ul>
+                    <li>
+                      A multi-step carpooling form with custom Google Maps
+                      integration, dynamic pricing, and live rider demand on the
+                      route
+                    </li>
+                    <li>
+                      B2B analytics dashboard with CO2 tracking and carpooling
+                      insights, used by partner organisations
+                    </li>
+                    <li>
+                      A configurable reward and gamification system to drive
+                      user engagement
+                    </li>
+                  </ul>
+                </div>
+                <ul class="technologies">
+                  <li>React</li>
+                  <li>Next.js</li>
+                  <li>Symfony</li>
+                  <li>Symfony UX</li>
+                  <li>API Platform</li>
+                  <li>Tailwind</li>
+                  <li>Google Maps Platform</li>
+                </ul>
+              </div>
             </div>
-        </section>
+          </a>
+          <div class="project maintenance to-slide-up">
+            <div class="header">
+              <img
+                src="./assets/img/projects/project1-1.png"
+                alt="Capture écran 1 du site de maintenance Devolie"
+              />
+              <img
+                src="./assets/img/projects/project1-2.png"
+                alt="Capture écran 2 du site de maintenance Devolie"
+              />
+            </div>
+            <div class="content">
+              <div class="title">
+                <p>Maintenance Devolie</p>
+              </div>
+              <div class="description">
+                <p>
+                  The team needed a tool to manage their maintenance tickets, so
+                  I built a custom application to handle ticketing, maintenance,
+                  later expanding it to include client invoicing.
+                </p>
+                <p>
+                  Email notifications, file uploads, and ticket assignment
+                  helped streamline the agency's day-to-day workflow.
+                </p>
+              </div>
+              <ul class="technologies">
+                <li>React</li>
+                <li>Symfony</li>
+                <li>Docker</li>
+                <li>CI/CD</li>
+                <li>VPS</li>
+              </ul>
+            </div>
+          </div>
+          <a
+            href="https://www.rvdiagimmo.com/"
+            class="project rvdi project-with-link to-slide-up"
+            target="_blank"
+          >
+            <div>
+              <div class="header">
+                <img
+                  src="./assets/img/projects/project2-1.png"
+                  alt="Capture écran 1 du site de RVDI"
+                />
+                <img
+                  src="./assets/img/projects/project2-2.png"
+                  alt="Capture écran 2 du site de RVDI"
+                />
+              </div>
+              <div class="content">
+                <div class="title">
+                  <p>RVDI</p>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="description">
+                  <p>
+                    RVDI is an annual French forum dedicated to property
+                    diagnostics. I built a client dashboard to manage site
+                    content and stand bookings, with a booking form featuring
+                    dynamic pricing based on the selected package.
+                  </p>
+                </div>
+                <ul class="technologies">
+                  <li>Symfony</li>
+                  <li>EasyAdmin</li>
+                  <li>SCSS</li>
+                  <li>JS</li>
+                </ul>
+              </div>
+            </div>
+          </a>
+          <div class="project tamago to-slide-up">
+            <div class="header">
+              <img
+                src="./assets/img/projects/project3-1.png"
+                alt="Capture écran 1 du site Tamago"
+              />
+              <img
+                src="./assets/img/projects/gif-tamago.gif"
+                alt="Capture écran de l'écran d'un tamago"
+              />
+              <img
+                src="./assets/img/projects/sprite-rabbit.png"
+                alt="Capture écran 2 du site de Tamago"
+              />
+            </div>
+            <div class="content">
+              <div class="title">
+                <p>Tamago</p>
+              </div>
+              <div class="description">
+                <p>
+                  Tamago is a browser-based game inspired by the classic
+                  Tamagotchi, built as a final-year project at O'clock.
+                </p>
+                <p>
+                  As a team of 5 developers, we took it from initial specs all
+                  the way to deployment
+                </p>
+                <p>
+                  I personally designed all the sprite sheets, and real-time
+                  stat updates are handled via Crontab.
+                </p>
+              </div>
+              <ul class="technologies">
+                <li>React</li>
+                <li>Typescript</li>
+                <li>Symfony</li>
+                <li>Docker</li>
+                <li>CD</li>
+                <li>Pixel Art</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project devolie to-slide-up">
+            <div class="header">
+              <img
+                src="./assets/img/projects/project4-2.png"
+                alt="Capture écran 2 du site de Devolie"
+              />
+              <img
+                src="./assets/img/projects/project4-1.png"
+                alt="Capture écran 1 du site de Devolie"
+              />
+            </div>
+            <div class="content">
+              <div class="title title">
+                <p>Devolie</p>
+              </div>
+              <div class="description">
+                <p>
+                  Beyond the internal maintenance app, I also built Devolie's
+                  website using WordPress, a natural fit for a WordPress-focused
+                  agency. I used a Theme Building approach for long-term
+                  maintainability, and took care of both content writing and
+                  visual asset selection.
+                </p>
+              </div>
+              <ul class="technologies">
+                <li>WordPress</li>
+                <li>ACF</li>
+                <li>Theme Building</li>
+                <li>Design</li>
+                <li>Content Writing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact container">
+        <div class="cta orb-left">
+          <h2>Want to work together ?</h2>
+          <a href="mailto:hornn.ophelie@gmail.com"
+            >Let's connect!
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="visuals">
+          <img
+            class="gradient-orb"
+            src="assets/img/gradient-orb.png"
+            alt="Orbe avec un fond gradient"
+          />
+          <img
+            class="lightbulb"
+            src="assets/img/lightbulb.png"
+            alt="Ampoule 3d"
+          />
+          <img
+            class="enveloppe"
+            src="assets/img/enveloppe.png"
+            alt="Enveloppe 3d"
+          />
+        </div>
+      </section>
     </main>
 
-
     <footer>
-        <p>Designé sur Figma et développé avec ❤ par moi-même.</p>
-        <a href="https://hoop-helie.github.io/portfolio/" target="_blank">Voir mon portfolio v1</a>
+      <p>Designed on Figma and developed with ❤ by me</p>
+      <a href="https://hoop-helie.github.io/portfolio/" target="_blank"
+        >See my v1 portfolio</a
+      >
     </footer>
 
     <script src="js/shift-bg/util.js"></script>
@@ -518,8 +611,7 @@
     <script src="js/nav-desktop.js"></script>
     <script src="js/nav-mobile.js"></script>
     <script src="js/hero-section.js"></script>
-    <script src="js/loading.js"></script> 
+    <script src="js/loading.js"></script>
     <script src="js/on-scroll.js"></script>
-</body>
-
+  </body>
 </html>

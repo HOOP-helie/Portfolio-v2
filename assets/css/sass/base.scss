@@ -3,6 +3,7 @@
     --text-light: rgb(255, 255, 255);
     --secondary: rgb(160, 184, 207);
     --primary: #7290FE;
+    --highlight: #8961c5;
     scroll-behavior: smooth;
     scroll-padding-top: 10vh;
 }
@@ -39,6 +40,14 @@ p {
 
 .txt-primary {
     color: var(--primary)
+}
+
+a.txt-primary {
+    transition: color 0.3s;
+}
+
+a.txt-primary:hover {
+    color: var(--highlight)
 }
 
 .txt-light {

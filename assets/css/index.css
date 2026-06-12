@@ -148,6 +148,7 @@ a {
   --text-light: rgb(255, 255, 255);
   --secondary: rgb(160, 184, 207);
   --primary: #7290FE;
+  --highlight: #8961c5;
   scroll-behavior: smooth;
   scroll-padding-top: 10vh;
 }
@@ -184,6 +185,14 @@ p {
 
 .txt-primary {
   color: var(--primary);
+}
+
+a.txt-primary {
+  transition: color 0.3s;
+}
+
+a.txt-primary:hover {
+  color: var(--highlight);
 }
 
 .txt-light {
@@ -636,11 +645,7 @@ footer a:hover {
   width: 90%;
 }
 .hero-section h1 {
-  font-size: clamp(2rem, 3vw, 3.125rem);
-}
-.hero-section .small-h1 {
-  font-size: 2rem;
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 }
 .hero-section > div {
   width: 100%;
