@@ -584,7 +584,7 @@ footer a:hover {
 }
 .menu .menu-link {
   width: 100%;
-  transition: all 0.5s;
+  transition: all 0.3s;
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   margin-bottom: 4rem;
   transform: translateY(100%);
@@ -1148,71 +1148,52 @@ footer a:hover {
   #projects .project .header {
     height: 15rem;
   }
-  #projects .project:first-child .header img:first-child {
+  #projects .project img, #projects .project img:hover {
+    bottom: 0 !important;
+  }
+  #projects .project.stadiumgo .header img:first-child {
     right: 5%;
     height: 90%;
     width: auto;
-    bottom: 0;
     max-width: 15rem;
   }
-  #projects .project:first-child .header img:nth-child(2) {
-    left: 5%;
+  #projects .project.stadiumgo .header img:nth-child(2) {
+    right: 10%;
     max-width: 20rem;
-    bottom: 0;
-  }
-  #projects .project:first-child:hover img:nth-child(2) {
-    bottom: 0 !important;
-  }
-  #projects .project:nth-child(2) .header img:first-child {
-    height: 90%;
-    width: auto;
-    bottom: 0;
-    left: 10%;
-  }
-  #projects .project:nth-child(2) .header img:nth-child(2) {
-    width: 50%;
-    max-width: 13rem;
-    bottom: 0;
-    right: 10%;
-  }
-  #projects .project:nth-child(4) .header img:first-child {
-    height: 90%;
-    width: auto;
-    bottom: -2rem;
-    left: 10%;
-  }
-  #projects .project:nth-child(4) .header img:nth-child(2) {
-    height: 90%;
-    width: auto;
-    bottom: 0;
-    right: 10%;
   }
 }
 @media screen and (max-width: 450px) {
   #projects .project .content {
     padding: 1.5rem 0.8rem;
   }
-  #projects .project:first-child .header img:nth-child(2) {
-    height: 45%;
-    width: auto;
-  }
-  #projects .project:nth-child(2) .header img:first-child {
-    left: 5%;
-  }
-  #projects .project:nth-child(2) .header img:nth-child(2) {
+  #projects .project.stadiumgo .header img:nth-child(2) {
+    width: 50%;
+    bottom: 0;
     right: 5%;
   }
-  #projects .project:nth-child(4) .header img:first-child {
-    width: auto;
-    height: 70%;
-    bottom: 0;
-    left: 5%;
-  }
-  #projects .project:nth-child(4) .header img:nth-child(2) {
+  #projects .project.maintenance .header Img:first-child {
     height: 80%;
     width: auto;
     bottom: 0;
     right: 5%;
+  }
+  #projects .project.maintenance .header img:nth-child(2) {
+    width: 70%;
+    bottom: 0 !important;
+    left: 5%;
+    z-index: 10;
+  }
+  #projects .project.devolie .header {
+    background-image: url("./../img/bg-1.png");
+  }
+  #projects .project.devolie .header img:first-child {
+    width: 50%;
+    left: 5%;
+  }
+  #projects .project.devolie .header img:nth-child(2) {
+    width: 50%;
+    right: 5%;
+    bottom: -2rem !important;
   }
 }
 .contact {
